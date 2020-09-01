@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-end",
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(3),
     bottom: 0,
     right: 0,
     position: 'fixed',
   },
   links: {
     maxWidth: "fit-content",
+    margin: theme.spacing(0.5),
   },
 }));
 
