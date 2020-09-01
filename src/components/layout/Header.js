@@ -6,6 +6,24 @@ import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import { findByLabelText } from "@testing-library/react";
+
+const useStyles = makeStyles((theme) => ({
+  navigation: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  buttons: {
+    color: "white",
+  },
+  layout: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+}));
 
 function HideOnScroll({ children, window }) {
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -30,15 +48,23 @@ HideOnScroll.propTypes = {
 };
 
 const Header = (props) => {
+  const classes = useStyles();
+
   return (
     <div>
       <CssBaseline />
       <HideOnScroll {...props}>
-          <AppBar>
-              <Toolbar>
-                  <Typography variant='h6'>Hoang Dinh</Typography>
-              </Toolbar>
-          </AppBar>
+        <AppBar>
+          <Toolbar className={classes.layout}>
+            <Typography variant="h6">Hoang Dinh</Typography>
+            <Toolbar className={classes.navigation}>
+              <Button className={classes.buttons}>About</Button>
+              <Button className={classes.buttons}>Work</Button>
+              <Button className={classes.buttons}>Contact</Button>
+              <Button className={classes.buttons}>Resume</Button>
+            </Toolbar>
+          </Toolbar>
+        </AppBar>
       </HideOnScroll>
       <Toolbar />
     </div>
