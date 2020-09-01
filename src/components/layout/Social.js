@@ -4,10 +4,20 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
 import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+  },
+});
 
 const Social = () => {
+  const classes = useStyles();
+
   return (
-    <div>
+    <div className={classes.root}>
       <Link href="https://github.com/HoangTienDinh" target="blank">
         <GitHubIcon />
       </Link>
