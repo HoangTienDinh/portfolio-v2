@@ -18,7 +18,6 @@ const Landing = () => {
   return (
     <Card>
       <CardMedia
-        component="image"
         className={classes.media}
         image={Image}
         title="Landing Page"
