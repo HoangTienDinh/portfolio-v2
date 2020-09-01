@@ -6,28 +6,52 @@ import EmailIcon from "@material-ui/icons/Email";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "flex-end",
+    marginRight: theme.spacing(1),
+    bottom: 0,
+    right: 0,
+    position: 'fixed',
   },
-});
+  links: {
+    maxWidth: "fit-content",
+  },
+}));
 
 const Social = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Link href="https://github.com/HoangTienDinh" target="blank">
+      <Link
+        className={classes.links}
+        href="https://github.com/HoangTienDinh"
+        target="blank"
+      >
         <GitHubIcon />
       </Link>
-      <Link href="https://www.linkedin.com/in/hoangdinh90/" target="blank">
+      <Link
+        className={classes.links}
+        href="https://www.linkedin.com/in/hoangdinh90/"
+        target="blank"
+      >
         <LinkedInIcon />
       </Link>
-      <Link href="https://www.instagram.com/hohohoang/" target="blank">
+      <Link
+        className={classes.links}
+        href="https://www.instagram.com/hohohoang/"
+        target="blank"
+      >
         <InstagramIcon />
       </Link>
-      <Link href="mailto:hoangdinh90@gmail.com" target="blank">
+      <Link
+        className={classes.links}
+        href="mailto:hoangdinh90@gmail.com"
+        target="blank"
+      >
         <EmailIcon />
       </Link>
     </div>
