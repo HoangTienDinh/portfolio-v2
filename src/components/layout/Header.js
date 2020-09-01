@@ -9,6 +9,7 @@ import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
   navigation: {
@@ -58,23 +59,29 @@ const Header = (props) => {
           <Toolbar className={classes.layout}>
             <Typography variant="h6">Hoang Dinh</Typography>
             {/* Update links later when you build out the page */}
-            <Toolbar className={classes.navigation}>
-              <Link href="#">
-                <Button className={classes.buttons}>About</Button>
-              </Link>
+            <Hidden only={['xs']}>
+              <Toolbar className={classes.navigation}>
+                <Link href="#">
+                  <Button className={classes.buttons}>About</Button>
+                </Link>
 
-              <Link href="#">
-                <Button className={classes.buttons}>Work</Button>
-              </Link>
+                <Link href="#">
+                  <Button className={classes.buttons}>Work</Button>
+                </Link>
 
-              <Link href="#">
-                <Button className={classes.buttons}>Contact</Button>
-              </Link>
+                <Link href="#">
+                  <Button className={classes.buttons}>Contact</Button>
+                </Link>
 
-              <Link href="#">
-                <Button className={classes.buttons}>Resume</Button>
-              </Link>
-            </Toolbar>
+                <Link href="#">
+                  <Button className={classes.buttons}>Resume</Button>
+                </Link>
+              </Toolbar>
+            </Hidden>
+
+            <Hidden only={['sm', 'md', 'lg', 'xl']}>
+              <Typography>HELLO HOANG on a small screen</Typography>
+            </Hidden>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
