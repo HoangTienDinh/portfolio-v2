@@ -8,7 +8,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { findByLabelText } from "@testing-library/react";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   navigation: {
@@ -57,11 +57,23 @@ const Header = (props) => {
         <AppBar>
           <Toolbar className={classes.layout}>
             <Typography variant="h6">Hoang Dinh</Typography>
+            {/* Update links later when you build out the page */}
             <Toolbar className={classes.navigation}>
-              <Button className={classes.buttons}>About</Button>
-              <Button className={classes.buttons}>Work</Button>
-              <Button className={classes.buttons}>Contact</Button>
-              <Button className={classes.buttons}>Resume</Button>
+              <Link href="#">
+                <Button className={classes.buttons}>About</Button>
+              </Link>
+
+              <Link href="#">
+                <Button className={classes.buttons}>Work</Button>
+              </Link>
+
+              <Link href="#">
+                <Button className={classes.buttons}>Contact</Button>
+              </Link>
+
+              <Link href="#">
+                <Button className={classes.buttons}>Resume</Button>
+              </Link>
             </Toolbar>
           </Toolbar>
         </AppBar>
