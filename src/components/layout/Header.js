@@ -10,6 +10,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Hidden from "@material-ui/core/Hidden";
+import MenuIcon from "@material-ui/icons/Menu";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   navigation: {
@@ -59,7 +61,7 @@ const Header = (props) => {
           <Toolbar className={classes.layout}>
             <Typography variant="h6">Hoang Dinh</Typography>
             {/* Update links later when you build out the page */}
-            <Hidden only={['xs']}>
+            <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
                 <Link href="#">
                   <Button className={classes.buttons}>About</Button>
@@ -79,8 +81,15 @@ const Header = (props) => {
               </Toolbar>
             </Hidden>
 
-            <Hidden only={['sm', 'md', 'lg', 'xl']}>
-              <Typography>HELLO HOANG on a small screen</Typography>
+            <Hidden only={["sm", "md", "lg", "xl"]}>
+              <IconButton
+                edge="end"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              >
+                <MenuIcon />
+              </IconButton>
             </Hidden>
           </Toolbar>
         </AppBar>
