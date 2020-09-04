@@ -3,19 +3,20 @@ const portfolio = {
     title: "Test One",
     description: "Here is some information about Test One, my best Test",
     image: "dummy data, i'll figure out dummy photos soon",
-    technology: ['React', 'Javascript', 'MUI'],
+    technology: ["React", "Javascript", "MUI"],
   },
   featureTwo: {
     title: "Test Two",
-    description: "Sure here is some more dummy information, but it's on TEST TWO",
+    description:
+      "Sure here is some more dummy information, but it's on TEST TWO",
     image: "another image",
-    technology: ['React', 'Firebase', 'Tailwind'],
+    technology: ["React", "Firebase", "Tailwind"],
   },
   featureThree: {
     title: "TEST THREE",
     description: "OMG IT'S ONE OF THE TOP THREEEEEEEEEEEEEE",
     image: "Hi",
-    technology: ['Javascript', 'Alan AI', 'Firebase'],
+    technology: ["Javascript", "Alan AI", "Firebase"],
   },
   noteworthyOne: {
     title: "",
@@ -52,5 +53,9 @@ const portfolio = {
     description: "",
     image: "",
     technology: [],
+  },
+  aboutMe: {
+    headline: "",
+    description: "",
   },
 };
