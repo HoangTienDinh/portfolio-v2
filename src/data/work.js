@@ -17,4 +17,40 @@ const portfolio = {
         image: '',
         technology: [],
     },
+    noteworthyOne: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
+    noteworthyTwo: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
+    noteworthyThree: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
+    noteworthyFour: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
+    noteworthyFive: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
+    noteworthySix: {
+        title: '',
+        description: '',
+        image: '',
+        technology: [],
+    },
 }
