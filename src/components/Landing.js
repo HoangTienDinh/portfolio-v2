@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "../assets/newWest.jpg";
 import Typography from "@material-ui/core/Typography";
+import Reveal from "react-reveal/Reveal";
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -16,11 +17,13 @@ const Landing = () => {
   const classes = useStyles();
 
   return (
-    <Card>
-      <CardMedia className={classes.media} image={Image} title="Landing Page">
-        <Typography>Hello</Typography>
-      </CardMedia>
-    </Card>
+    <Reveal duration='2000' effect='fadeInUp'>
+      <Card>
+        <CardMedia className={classes.media} image={Image} title="Landing Page">
+          <Typography>Hello</Typography>
+        </CardMedia>
+      </Card>
+    </Reveal>
   );
 };
 
