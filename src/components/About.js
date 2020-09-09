@@ -1,16 +1,22 @@
 import React from "react";
-import Landing from "./Landing";
-import { Container, Typography, CardMedia, Card } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  CardMedia,
+  Card,
+  Grid,
+} from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    width: "100vw",
+    width: "100%",
   },
   media: {
-    height: 0,
+    height: 200,
+    width: 200,
   },
 }));
 
@@ -19,12 +25,18 @@ const About = () => {
 
   return (
     <Container id="about" className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={profilePicture}
-        title="Profile Picture"
-      />
-      <Typography>BLURB BLURB BLURB</Typography>
+      <Grid container justify="space-evenly" alignItems="center">
+        <Grid item>
+          <CardMedia
+            className={classes.media}
+            image={profilePicture}
+            title="Profile Picture"
+          />
+        </Grid>
+        <Grid item>
+          <Typography>BLURB BLURB BLURB</Typography>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
