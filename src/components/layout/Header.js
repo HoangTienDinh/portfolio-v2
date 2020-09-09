@@ -106,7 +106,7 @@ const Header = (props) => {
             {/* Update links later when you build out the page */}
             <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
-                <Link href="#">
+                <Link href="#about">
                   <Button className={classes.buttons}>About</Button>
                 </Link>
 
@@ -114,7 +114,7 @@ const Header = (props) => {
                   <Button className={classes.buttons}>Work</Button>
                 </Link>
 
-                <Link href="#">
+                <Link href="#contact">
                   <Button className={classes.buttons}>Contact</Button>
                 </Link>
 
