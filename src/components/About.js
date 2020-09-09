@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     height: 200,
     width: 200,
   },
+  grid: {
+    height: "inherit",
+  },
 }));
 
 const About = () => {
@@ -25,7 +28,12 @@ const About = () => {
 
   return (
     <Container id="about" className={classes.root}>
-      <Grid container justify="space-evenly" alignItems="center">
+      <Grid
+        className={classes.grid}
+        container
+        justify="space-evenly"
+        alignItems="center"
+      >
         <Grid item>
           <CardMedia
             className={classes.media}
