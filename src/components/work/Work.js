@@ -1,11 +1,12 @@
-import React from 'react'
-import Landing from '../Landing'
-const Work = () => {
-    return (
-        <div>
-            <Landing />
-        </div>
-    )
-}
+import React from "react";
+import Landing from "../Landing";
 
-export default Work
+const Work = () => {
+  return (
+    <div id="work">
+      <Landing />
+    </div>
+  );
+};
+
+export default Work;

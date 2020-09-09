@@ -1,12 +1,12 @@
-import React from 'react'
-import Landing from './Landing'
+import React from "react";
+import Landing from "./Landing";
 
 const Contact = () => {
-    return (
-        <div>
-            <Landing />
-        </div>
-    )
-}
+  return (
+    <div id="contact">
+      <Landing />
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;

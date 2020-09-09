@@ -110,7 +110,7 @@ const Header = (props) => {
                   <Button className={classes.buttons}>About</Button>
                 </Link>
 
-                <Link href="#">
+                <Link href="#work">
                   <Button className={classes.buttons}>Work</Button>
                 </Link>
 
