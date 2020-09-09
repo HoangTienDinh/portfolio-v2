@@ -159,16 +159,16 @@ const Header = (props) => {
                           id="menu-list-grow"
                           onKeyDown={handleListKeyDown}
                         >
-                          <Link href="https://www.google.ca" target="blank">
+                          <Link href="#about">
                             <MenuItem onClick={handleClose}>About</MenuItem>
                           </Link>
-                          <Link href="https://www.google.ca" target="blank">
+                          <Link href="#work">
                             <MenuItem onClick={handleClose}>Work</MenuItem>
                           </Link>
-                          <Link href="https://www.google.ca" target="blank">
+                          <Link href="#contact">
                             <MenuItem onClick={handleClose}>Contact</MenuItem>
                           </Link>
-                          <Link href="https://www.google.ca" target="blank">
+                          <Link href="#">
                             <MenuItem onClick={handleClose}>Resume</MenuItem>
                           </Link>
                         </MenuList>
