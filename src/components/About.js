@@ -34,14 +34,14 @@ const About = () => {
         justify="space-evenly"
         alignItems="center"
       >
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <CardMedia
             className={classes.media}
             image={profilePicture}
             title="Profile Picture"
           />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Typography>BLURB BLURB BLURB</Typography>
         </Grid>
       </Grid>
