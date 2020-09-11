@@ -27,46 +27,80 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "56.25%",
   },
 }));
-// write a conditional using i % 2 in className for the element to render it left or right side
 
 const FeaturedProjects = () => {
   const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
 
-  const handleSide = (index) => {
-    if (index === 1 || index % 2 === 1) {
-      return `${classes.left} ${classes.root}`;
+  // write a conditional using i % 2 in className for the element to render it left or right side
+  const handleSide = (project, index) => {
+    if (index === 0 || index % 2 === 0) {
+      return (
+        <Grid Container key={index} className={classes.left}>
+          <Grid item>
+            <Link
+              href={project.website ? project.website : project.github}
+              onClick={preventDefault}
+            >
+              <CardMedia
+                className={classes.media}
+                image={project.image}
+                title={project.title}
+              />
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link
+              href={project.website ? project.website : project.github}
+              onClick={preventDefault}
+            >
+              <Typography>{project.title}</Typography>
+            </Link>
+            <Typography>{project.description}</Typography>
+            {project.technology.map((tech) => (
+              <Typography>{tech}</Typography>
+            ))}
+          </Grid>
+        </Grid>
+      );
     } else {
-      return classes.right;
+      return (
+        <Grid Container key={index} className={classes.right}>
+          <Grid item>
+            <Link
+              href={project.website ? project.website : project.github}
+              onClick={preventDefault}
+            >
+              <Typography>{project.title}</Typography>
+            </Link>
+            <Typography>{project.description}</Typography>
+            {project.technology.map((tech) => (
+              <Typography>{tech}</Typography>
+            ))}
+          </Grid>
+
+          <Grid item>
+            <Link
+              href={project.website ? project.website : project.github}
+              onClick={preventDefault}
+            >
+              <CardMedia
+                className={classes.media}
+                image={project.image}
+                title={project.title}
+              />
+            </Link>
+          </Grid>
+        </Grid>
+      );
     }
   };
 
-  const preventDefault = (event) => event.preventDefault();
-  
   return (
     <Container>
-      {featuredProj.map((project, i) => (
+      {featuredProj.map((proj, ind) => (
         <Reveal duration="2000" effect="fadeInUp">
-          <Grid Container key={i} className={handleSide(i)}>
-            <Grid item>
-              <Link
-                href={project.website ? project.website : project.github}
-                onClick={preventDefault}
-              >
-                <CardMedia
-                  className={classes.media}
-                  image={project.image}
-                  title="Project Image"
-                />
-              </Link>
-            </Grid>
-            <Grid item>
-              <Typography>{project.title}</Typography>
-              <Typography>{project.description}</Typography>
-              {project.technology.map((tech) => (
-                <Typography>{tech}</Typography>
-              ))}
-            </Grid>
-          </Grid>
+          {handleSide(proj, ind)}
         </Reveal>
       ))}
     </Container>

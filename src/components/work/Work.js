@@ -5,7 +5,7 @@ import { Container } from "@material-ui/core";
 
 const Work = () => {
   return (
-    <Container id="#work">
+    <Container id="work">
       <FeaturedProjects />
       <NoteworthyProjects />
     </Container>
