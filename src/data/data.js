@@ -1,4 +1,4 @@
-import picture from "../assets/newWest.jpg";
+import picture from "../assets/Alan.png";
 
 const portfolio = {
   featuredProj: [
