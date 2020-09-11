@@ -10,7 +10,7 @@ const { headline, description } = data.portfolio.aboutMe;
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    width: "100vw",
+    width: "inherit",
   },
   media: {
     height: 200,
