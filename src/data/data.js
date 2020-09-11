@@ -1,5 +1,5 @@
 const portfolio = {
-  featuredProject: [
+  featuredProjects: [
     {
       title: "Test One",
       description: "Here is some information about Test One, my best Test",
