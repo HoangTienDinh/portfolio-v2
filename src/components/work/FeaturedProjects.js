@@ -2,6 +2,7 @@ import React from "react";
 import data from "../../data/data";
 import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
+import { CardMedia } from "@material-ui/core";
 
 const { featuredProj } = data.portfolio;
 
@@ -12,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
   },
   right: {
     backgroundColor: "red",
+  },
+  media: {
+    height: 200,
+    width: 200,
   },
 }));
 // write a conditional using i % 2 in className for the element to render it left or right side
@@ -30,11 +35,12 @@ const FeaturedProjects = () => {
   return (
     <div>
       {featuredProj.map((project, i) => (
-        <Reveal duration='2000' effect='fadeInUp'>
+        <Reveal duration="2000" effect="fadeInUp">
           <div key={i} className={handleSide(i)}>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
-            <p>{project.image}</p>
+            <CardMedia className={classes.media} image={project.image} title="Project Image" />
+            {project.image}
             {project.technology.map((tech) => (
               <h3>{tech}</h3>
             ))}

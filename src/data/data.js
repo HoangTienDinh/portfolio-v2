@@ -1,61 +1,69 @@
+import picture from '../assets/newWest.jpg'
+
 const portfolio = {
   featuredProj: [
     {
       title: "Test One",
       description: "Here is some information about Test One, my best Test",
-      image: "dummy data, i'll figure out dummy photos soon",
+      image: picture,
       technology: ["React", "Javascript", "MUI"],
     },
     {
       title: "Test Two",
       description:
         "Sure here is some more dummy information, but it's on TEST TWO",
-      image: "another image",
+      image: picture,
       technology: ["React", "Firebase", "Tailwind"],
     },
     {
       title: "TEST THREE",
       description: "OMG IT'S ONE OF THE TOP THREEEEEEEEEEEEEE",
-      image: "Hi",
+      image: picture,
       technology: ["Javascript", "Alan AI", "Firebase"],
     },
   ],
   noteworthyProj: [
     {
-      title: "",
-      description: "",
+      title: "Proj One",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
     {
-      title: "",
-      description: "",
+      title: "Proj Two",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
     {
-      title: "",
-      description: "",
+      title: "Proj Three",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
     {
-      title: "",
-      description: "",
+      title: "Proj Four",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
     {
-      title: "",
-      description: "",
+      title: "Proj Five",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
     {
-      title: "",
-      description: "",
+      title: "Proj Six",
+      description:
+        "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: [],
+      technology: ["React", "Javascript", "HTML", "CSS"],
     },
   ],
   aboutMe: {
