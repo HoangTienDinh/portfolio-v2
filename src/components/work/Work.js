@@ -1,10 +1,12 @@
 import React from "react";
-import Landing from "../Landing";
+import Featured from "./featured/Featured";
+import Noteworthy from "./noteworthy/Noteworthy";
 
 const Work = () => {
   return (
     <div id="work">
-      <Landing />
+      <Featured />
+      <Noteworthy />
     </div>
   );
 };
