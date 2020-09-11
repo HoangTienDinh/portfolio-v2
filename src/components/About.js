@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  Container,
-  Typography,
-  CardMedia,
-  Grid,
-} from "@material-ui/core";
+import { Container, Typography, CardMedia, Grid } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
-
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,16 +29,20 @@ const About = () => {
         justify="space-evenly"
         alignItems="center"
       >
+        <Fade left>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <CardMedia
+              className={classes.media}
+              image={profilePicture}
+              title="Profile Picture"
+            />
+          </Grid>
+        </Fade>
         <Grid item xs={12} sm={6} md={4} lg={3}>
-          <CardMedia
-            className={classes.media}
-            image={profilePicture}
-            title="Profile Picture"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3}>
-          <Typography variant='h3'>TITLE OF THE BLURB</Typography>
-          <Typography>BLURB BLURB BLURB</Typography>
+          <Fade right>
+            <Typography variant="h3">TITLE OF THE BLURB</Typography>
+            <Typography>BLURB BLURB BLURB</Typography>
+          </Fade>
         </Grid>
       </Grid>
     </Container>
