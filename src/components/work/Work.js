@@ -1,13 +1,15 @@
 import React from "react";
 import FeaturedProjects from "./FeaturedProjects";
 import NoteworthyProjects from "./NoteworthyProjects";
+import { Container } from "@material-ui/core";
 
 const Work = () => {
   return (
-    <div id="work">
+    <Container id="#work">
       <FeaturedProjects />
       <NoteworthyProjects />
-    </div>
+      SUP
+    </Container>
   );
 };
 

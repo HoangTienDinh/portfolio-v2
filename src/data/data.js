@@ -55,7 +55,9 @@ const portfolio = {
     technology: [],
   },
   aboutMe: {
-    headline: "",
-    description: "",
+    headline: "A Little Bit About Me",
+    description: "Here's some info that I think makes me sounds cool",
   },
 };
+
+export default { portfolio };
