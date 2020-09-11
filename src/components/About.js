@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    width: "100%",
+    width: "100vw",
   },
   media: {
     height: 200,
