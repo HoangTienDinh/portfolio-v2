@@ -34,7 +34,7 @@ const portfolio = {
       description:
         "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: ["React", "Javascript", "HTML", "CSS"],
+      technology: ["React", "Ruby", "HTML", "Ruby on Rails"],
       github: "www.github.com",
       website: "www.hoangtiendinh.com",
     },
@@ -45,15 +45,15 @@ const portfolio = {
       image: "",
       technology: ["React", "Javascript", "HTML", "CSS"],
       github: "www.github.com",
-      website: "www.hoangtiendinh.com",
+      website: "",
     },
     {
       title: "Proj Three",
       description:
         "A small little blurb about this cool project I did letting users do BLAH",
       image: "",
-      technology: ["React", "Javascript", "HTML", "CSS"],
-      github: "www.github.com",
+      technology: ["Gatsby", "Firebase", "MUI"],
+      github: "",
       website: "www.hoangtiendinh.com",
     },
     {

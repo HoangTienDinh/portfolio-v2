@@ -1,11 +1,19 @@
 import React from "react";
 import data from "../../data/data";
 import Reveal from "react-reveal";
-import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  Container,
+  Grid,
+  makeStyles,
+  Typography,
+  Link,
+} from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 
 const { noteworthyProj } = data.portfolio;
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
     width: "100%",
@@ -33,6 +41,10 @@ const useStyles = makeStyles(() => ({
   technology: {
     marginRight: "3%",
   },
+  links: {
+    maxWidth: "fit-content",
+    margin: theme.spacing(0.5),
+  },
 }));
 
 const NoteworthyProjects = () => {
@@ -52,6 +64,24 @@ const NoteworthyProjects = () => {
         {noteworthyProj.map((project, i) => (
           <Reveal duration={i * 1000} effect="fadeInUp">
             <Grid className={classes.grid} item>
+              {project.github && (
+                <Link
+                  className={classes.links}
+                  href={project.github}
+                  target="blank"
+                >
+                  <GitHubIcon />
+                </Link>
+              )}
+              {project.website && (
+                <Link
+                  className={classes.links}
+                  href={project.website}
+                  target="blank"
+                >
+                  <OpenInNewIcon />
+                </Link>
+              )}
               <Typography className={classes.title} variant="h6">
                 {project.title}
               </Typography>
