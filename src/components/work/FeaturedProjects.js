@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Grid,
   CardMedia,
@@ -12,7 +12,7 @@ import data from "../../data/data";
 
 const { featuredProj } = data.portfolio;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 345,
   },
@@ -26,15 +26,24 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
     paddingTop: "56.25%",
   },
+  title: {
+    textAlign: (side) => (side ? "right" : "left"),
+  },
+  description: {},
+  tech: {},
 }));
 
 const FeaturedProjects = () => {
-  const classes = useStyles();
+  const [side, setSide] = useState(true);
+  const classes = useStyles(side);
   const preventDefault = (event) => event.preventDefault();
 
   // write a conditional using i % 2 in className for the element to render it left or right side
   const handleSide = (project, index) => {
     if (index === 0 || index % 2 === 0) {
+
+// HOW DO I HANDLE STATE AND FLIP !SIDE TO RENDER THE CORRECT CSS
+
       return (
         <Grid Container key={index} className={classes.left}>
           <Grid item>
@@ -54,7 +63,7 @@ const FeaturedProjects = () => {
               href={project.website ? project.website : project.github}
               onClick={preventDefault}
             >
-              <Typography>{project.title}</Typography>
+              <Typography className={classes.title}>{project.title}</Typography>
             </Link>
             <Typography>{project.description}</Typography>
             {project.technology.map((tech) => (
@@ -71,7 +80,7 @@ const FeaturedProjects = () => {
               href={project.website ? project.website : project.github}
               onClick={preventDefault}
             >
-              <Typography>{project.title}</Typography>
+              <Typography className={classes.title}>{project.title}</Typography>
             </Link>
             <Typography>{project.description}</Typography>
             {project.technology.map((tech) => (
