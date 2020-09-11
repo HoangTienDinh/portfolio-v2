@@ -3,11 +3,11 @@ import {
   Container,
   Typography,
   CardMedia,
-  Card,
   Grid,
 } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,6 +42,7 @@ const About = () => {
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Typography variant='h3'>TITLE OF THE BLURB</Typography>
           <Typography>BLURB BLURB BLURB</Typography>
         </Grid>
       </Grid>
