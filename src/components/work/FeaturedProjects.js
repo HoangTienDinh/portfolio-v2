@@ -40,7 +40,6 @@ const FeaturedProjects = () => {
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <CardMedia className={classes.media} image={project.image} title="Project Image" />
-            {project.image}
             {project.technology.map((tech) => (
               <h3>{tech}</h3>
             ))}
