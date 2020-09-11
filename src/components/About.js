@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, CardMedia, Grid } from "@material-ui/core";
+import { Box, Typography, CardMedia, Grid } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
@@ -25,7 +25,7 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Container id="about" className={classes.root}>
+    <Box id="about" className={classes.root}>
       <Grid
         className={classes.grid}
         container
@@ -48,7 +48,7 @@ const About = () => {
           </Fade>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

@@ -17,13 +17,11 @@ const Landing = () => {
   const classes = useStyles();
 
   return (
-    <Reveal duration='2000' effect='fadeInUp'>
       <Card>
         <CardMedia className={classes.media} image={Image} title="Landing Page">
           <Typography>Hello</Typography>
         </CardMedia>
       </Card>
-    </Reveal>
   );
 };
 
