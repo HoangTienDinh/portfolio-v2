@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
+import FolderIcon from "@material-ui/icons/Folder";
 
 const { noteworthyProj } = data.portfolio;
 
@@ -45,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "fit-content",
     margin: theme.spacing(0.5),
   },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
 }));
 
 const NoteworthyProjects = () => {
@@ -64,24 +69,29 @@ const NoteworthyProjects = () => {
         {noteworthyProj.map((project, i) => (
           <Reveal duration={i * 1000} effect="fadeInUp">
             <Grid className={classes.grid} item>
-              {project.github && (
-                <Link
-                  className={classes.links}
-                  href={project.github}
-                  target="blank"
-                >
-                  <GitHubIcon />
-                </Link>
-              )}
-              {project.website && (
-                <Link
-                  className={classes.links}
-                  href={project.website}
-                  target="blank"
-                >
-                  <OpenInNewIcon />
-                </Link>
-              )}
+              <Grid className={classes.header} item>
+                <FolderIcon />
+                <Grid item>
+                  {project.github && (
+                    <Link
+                      className={classes.links}
+                      href={project.github}
+                      target="blank"
+                    >
+                      <GitHubIcon />
+                    </Link>
+                  )}
+                  {project.website && (
+                    <Link
+                      className={classes.links}
+                      href={project.website}
+                      target="blank"
+                    >
+                      <OpenInNewIcon />
+                    </Link>
+                  )}
+                </Grid>
+              </Grid>
               <Typography className={classes.title} variant="h6">
                 {project.title}
               </Typography>
