@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "50px",
     border: "solid 1px black",
     padding: "5%",
+    maxWidth: 345,
   },
   container: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
   },
   title: {},
@@ -65,9 +65,10 @@ const NoteworthyProjects = () => {
         container
         justify="space-evenly"
         alignItems="center"
+        spacing={3}
       >
         {noteworthyProj.map((project, i) => (
-          <Reveal duration={i * 1000} effect="fadeInUp">
+          <Reveal duration={i * 500} effect="fadeInUp">
             <Grid className={classes.grid} item>
               <Grid className={classes.header} item>
                 <FolderIcon />
