@@ -4,12 +4,15 @@ import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "../assets/newWest.jpg";
 import Typography from "@material-ui/core/Typography";
-import Reveal from "react-reveal/Reveal";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    width: 'inherit'
+  },
   media: {
     height: "100vh",
-    width: "100vw",
+    width: "inherit",
   },
 }));
 
@@ -17,11 +20,11 @@ const Landing = () => {
   const classes = useStyles();
 
   return (
-      <Card>
+      <Box className={classes.root}>
         <CardMedia className={classes.media} image={Image} title="Landing Page">
           <Typography>Hello</Typography>
         </CardMedia>
-      </Card>
+      </Box>
   );
 };
 
