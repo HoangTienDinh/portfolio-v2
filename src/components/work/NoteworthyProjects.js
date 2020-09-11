@@ -9,19 +9,30 @@ const useStyles = makeStyles(() => ({
   root: {
     height: "100%",
     width: "100%",
+    marginTop: "10%",
+    marginBottom: "10%",
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-    gridGap: '15px',
+    gridGap: "15px",
     position: "relative",
     marginTop: "50px",
+    border: "solid 1px black",
+    padding: "5%",
   },
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  }
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  title: {},
+  description: {},
+  tech: {
+    display: "flex",
+  },
+  technology: {
+    marginRight: "3%",
+  },
 }));
 
 const NoteworthyProjects = () => {
@@ -37,16 +48,21 @@ const NoteworthyProjects = () => {
         container
         justify="space-evenly"
         alignItems="center"
-
       >
         {noteworthyProj.map((project, i) => (
           <Reveal duration={i * 1000} effect="fadeInUp">
-            <Grid className={classes.grid} item >
-              <Typography>{project.title}</Typography>
-              <Typography>{project.description}</Typography>
-              {project.technology.map(tech => (
-                <Typography>{tech}</Typography>
-              ))}
+            <Grid className={classes.grid} item>
+              <Typography className={classes.title} variant="h6">
+                {project.title}
+              </Typography>
+              <Typography className={classes.description}>
+                {project.description}
+              </Typography>
+              <Grid className={classes.tech} item>
+                {project.technology.map((tech) => (
+                  <Typography className={classes.technology}>{tech}</Typography>
+                ))}
+              </Grid>
             </Grid>
           </Reveal>
         ))}
