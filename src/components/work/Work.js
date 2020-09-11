@@ -1,12 +1,12 @@
 import React from "react";
-import Featured from "./featured/Featured";
-import Noteworthy from "./noteworthy/Noteworthy";
+import FeaturedProjects from "./FeaturedProjects";
+import NoteworthyProjects from "./NoteworthyProjects";
 
 const Work = () => {
   return (
     <div id="work">
-      <Featured />
-      <Noteworthy />
+      <FeaturedProjects />
+      <NoteworthyProjects />
     </div>
   );
 };
