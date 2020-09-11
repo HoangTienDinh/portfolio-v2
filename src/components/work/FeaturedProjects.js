@@ -5,6 +5,7 @@ import {
   Container,
   makeStyles,
   Typography,
+  Link,
 } from "@material-ui/core";
 import Reveal from "react-reveal/Reveal";
 import data from "../../data/data";
@@ -39,17 +40,24 @@ const FeaturedProjects = () => {
     }
   };
 
+  const preventDefault = (event) => event.preventDefault();
+  
   return (
     <Container>
       {featuredProj.map((project, i) => (
         <Reveal duration="2000" effect="fadeInUp">
           <Grid Container key={i} className={handleSide(i)}>
             <Grid item>
-              <CardMedia
-                className={classes.media}
-                image={project.image}
-                title="Project Image"
-              />
+              <Link
+                href={project.website ? project.website : project.github}
+                onClick={preventDefault}
+              >
+                <CardMedia
+                  className={classes.media}
+                  image={project.image}
+                  title="Project Image"
+                />
+              </Link>
             </Grid>
             <Grid item>
               <Typography>{project.title}</Typography>

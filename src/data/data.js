@@ -7,8 +7,8 @@ const portfolio = {
       description: "Here is some information about Test One, my best Test",
       image: picture,
       technology: ["React", "Javascript", "MUI"],
-      github: "www.github.com",
-      website: "www.hoangtiendinh.com",
+      github: "https://www.github.com",
+      website: "https://www.hoangtiendinh.com",
     },
     {
       title: "Test Two",
@@ -25,7 +25,7 @@ const portfolio = {
       image: picture,
       technology: ["Javascript", "Alan AI", "Firebase"],
       github: "www.github.com",
-      website: "www.hoangtiendinh.com",
+      website: "",
     },
   ],
   noteworthyProj: [
