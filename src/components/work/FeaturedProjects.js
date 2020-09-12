@@ -16,8 +16,13 @@ const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 345,
   },
-  left: {
+  gridLeft: {
+    display: "grid",
+    gap: "10px",
+    gridTemplateColumns: "repeat(12, 1fr)",
+    alignItems: "center",
     backgroundColor: "blue",
+    marginBottom: "100px",
   },
   right: {
     backgroundColor: "red",
@@ -29,8 +34,20 @@ const useStyles = makeStyles(() => ({
   title: {
     textAlign: (side) => (side ? "right" : "left"),
   },
-  description: {},
-  tech: {},
+  content: {
+    gridColumn: "7 / -1",
+    textAlign: "right",
+    gridArea: "1 / 1 / -1 / 7",
+    position: "relative",
+  },
+  image: {
+    gridColumn: "1 / 8",
+    boxShadow: "0 10px 30px -15px black",
+    transition: "var(--transtion)",
+    gridArea: "1 / 6 / -1 / -1",
+    position: "relative",
+    zIndex: "1",
+  },
 }));
 
 const FeaturedProjects = () => {
@@ -44,8 +61,8 @@ const FeaturedProjects = () => {
       // HOW DO I HANDLE STATE AND FLIP !SIDE TO RENDER THE CORRECT CSS
 
       return (
-        <Grid Container key={index} className={classes.left}>
-          <Grid item>
+        <Grid Container key={index} className={classes.gridLeft}>
+          <Grid item className={classes.image}>
             <Link
               href={project.website ? project.website : project.github}
               onClick={preventDefault}
@@ -57,7 +74,7 @@ const FeaturedProjects = () => {
               />
             </Link>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.content}>
             <Link
               href={project.website ? project.website : project.github}
               onClick={preventDefault}
