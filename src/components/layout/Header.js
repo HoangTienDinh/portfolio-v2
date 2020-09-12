@@ -18,6 +18,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import Grow from "@material-ui/core/Grow";
+import Resume from "../../assets/Hoang Dinh Resume.pdf";
 
 const useStyles = makeStyles((theme) => ({
   navigation: {
@@ -103,7 +104,6 @@ const Header = (props) => {
         <AppBar>
           <Toolbar className={classes.layout}>
             <Typography variant="h6">Hoang Dinh</Typography>
-            {/* Update links later when you build out the page */}
             <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
                 <Link href="#about">
@@ -118,7 +118,7 @@ const Header = (props) => {
                   <Button className={classes.buttons}>Contact</Button>
                 </Link>
 
-                <Link href="#">
+                <Link href={Resume} target="blank">
                   <Button className={classes.buttons}>Resume</Button>
                 </Link>
               </Toolbar>
@@ -168,7 +168,7 @@ const Header = (props) => {
                           <Link href="#contact">
                             <MenuItem onClick={handleClose}>Contact</MenuItem>
                           </Link>
-                          <Link href="#">
+                          <Link href={Resume} target="blank">
                             <MenuItem onClick={handleClose}>Resume</MenuItem>
                           </Link>
                         </MenuList>
