@@ -10,18 +10,6 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: "100vh",
   },
-  headline: {
-    position: "absolute",
-    color: "white",
-    top: "50%",
-    left: "5%",
-  },
-  name: {
-    position: "absolute",
-    color: "white",
-    top: "40%",
-    left: "5%",
-  },
 }));
 
 const Contact = () => {
