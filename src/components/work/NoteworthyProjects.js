@@ -68,7 +68,7 @@ const NoteworthyProjects = () => {
         spacing={3}
       >
         {noteworthyProj.map((project, i) => (
-          <Reveal duration={i * 500} effect="fadeInUp">
+          <Reveal key={i} duration={i * 500} effect="fadeInUp">
             <Grid className={classes.grid} item>
               <Grid className={classes.header} item>
                 <FolderIcon />
@@ -100,8 +100,8 @@ const NoteworthyProjects = () => {
                 {project.description}
               </Typography>
               <Grid className={classes.tech} item>
-                {project.technology.map((tech) => (
-                  <Typography className={classes.technology}>{tech}</Typography>
+                {project.technology.map((tech, i) => (
+                  <Typography key={i} className={classes.technology}>{tech}</Typography>
                 ))}
               </Grid>
             </Grid>

@@ -41,8 +41,7 @@ const FeaturedProjects = () => {
   // write a conditional using i % 2 in className for the element to render it left or right side
   const handleSide = (project, index) => {
     if (index === 0 || index % 2 === 0) {
-
-// HOW DO I HANDLE STATE AND FLIP !SIDE TO RENDER THE CORRECT CSS
+      // HOW DO I HANDLE STATE AND FLIP !SIDE TO RENDER THE CORRECT CSS
 
       return (
         <Grid Container key={index} className={classes.left}>
@@ -66,8 +65,8 @@ const FeaturedProjects = () => {
               <Typography className={classes.title}>{project.title}</Typography>
             </Link>
             <Typography>{project.description}</Typography>
-            {project.technology.map((tech) => (
-              <Typography>{tech}</Typography>
+            {project.technology.map((tech, i) => (
+              <Typography key={i}>{tech}</Typography>
             ))}
           </Grid>
         </Grid>
@@ -83,8 +82,8 @@ const FeaturedProjects = () => {
               <Typography className={classes.title}>{project.title}</Typography>
             </Link>
             <Typography>{project.description}</Typography>
-            {project.technology.map((tech) => (
-              <Typography>{tech}</Typography>
+            {project.technology.map((tech, i) => (
+              <Typography key={i}>{tech}</Typography>
             ))}
           </Grid>
 
@@ -108,7 +107,7 @@ const FeaturedProjects = () => {
   return (
     <Container>
       {featuredProj.map((proj, ind) => (
-        <Reveal duration="2000" effect="fadeInUp">
+        <Reveal key={ind} duration="2000" effect="fadeInUp">
           {handleSide(proj, ind)}
         </Reveal>
       ))}
