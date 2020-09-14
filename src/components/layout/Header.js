@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   layout: {
     display: "flex",
     justifyContent: "space-between",
+    background: "#003366",
   },
   root: {
     display: "flex",
