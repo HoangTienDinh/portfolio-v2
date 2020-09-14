@@ -62,7 +62,6 @@ const FeaturedProjects = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
 
-  // write a conditional using i % 2 in className for the element to render it left or right side
   const handleSide = (project, index) => {
     let contentContainer;
     let imageContainer;
@@ -74,11 +73,6 @@ const FeaturedProjects = () => {
       contentContainer = classes.contentLeft;
       imageContainer = classes.imageRight;
     }
-
-    // if (index === 0 || index % 2 === 0) {
-
-    //   contentContainer = classes.contentLeft
-    //   imageContainer = classes.imageLeft
 
     return (
       <Grid Container key={index} className={classes.projectContainer}>
@@ -108,39 +102,6 @@ const FeaturedProjects = () => {
         </Grid>
       </Grid>
     );
-    // }
-
-    // else {
-    //   return (
-    //     <Grid Container key={index} className={classes.right}>
-    //       <Grid item>
-    //         <Link
-    //           href={project.website ? project.website : project.github}
-    //           onClick={preventDefault}
-    //         >
-    //           <Typography>{project.title}</Typography>
-    //         </Link>
-    //         <Typography>{project.description}</Typography>
-    //         {project.technology.map((tech, i) => (
-    //           <Typography key={i}>{tech}</Typography>
-    //         ))}
-    //       </Grid>
-
-    //       <Grid item>
-    //         <Link
-    //           href={project.website ? project.website : project.github}
-    //           onClick={preventDefault}
-    //         >
-    //           <CardMedia
-    //             className={classes.media}
-    //             image={project.image}
-    //             title={project.title}
-    //           />
-    //         </Link>
-    //       </Grid>
-    //     </Grid>
-    //   );
-    // }
   };
 
   return (
