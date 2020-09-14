@@ -8,12 +8,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     bottom: 0,
     left: 0,
-    position: 'fixed',
-    width: '100%'
+    position: "fixed",
+    width: "100%",
   },
   footer: {
-    
-  }
+    "&:hover": {
+      color: "#FF9900",
+    },
+  },
 }));
 
 const Footer = () => {
@@ -22,7 +24,9 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <Link href="https://github.com/HoangTienDinh/portfolio-v2" target="blank">
-        <Typography>Designed & built by Hoang Dinh</Typography>
+        <Typography className={classes.footer}>
+          Designed & built by Hoang Dinh
+        </Typography>
       </Link>
     </div>
   );
