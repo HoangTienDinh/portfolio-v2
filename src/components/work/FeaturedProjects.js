@@ -7,6 +7,8 @@ import {
   Typography,
   Link,
 } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 import Reveal from "react-reveal/Reveal";
 import data from "../../data/data";
 
@@ -159,6 +161,10 @@ const FeaturedProjects = () => {
                 {tech}
               </Typography>
             ))}
+          </Grid>
+          <Grid item className={linkWrapper}>
+            {project.github && <Link><GitHubIcon /></Link>}
+            {project.website && <Link><OpenInNewIcon /></Link>}
           </Grid>
         </Grid>
       </Grid>
