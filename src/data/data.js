@@ -3,27 +3,26 @@ import picture from "../assets/Alan.png";
 const portfolio = {
   featuredProj: [
     {
-      title: "Test One",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
+      title: "Alan News",
+      description: "Built with the intention to learn how to create an interactive chat bot. Working with AlanAI API to allow users to fetch news articles from the NewsAPI API with voice commands.",
       image: picture,
-      technology: ["React", "Javascript", "MUI"],
-      github: "https://www.github.com",
-      website: "https://www.hoangtiendinh.com",
+      technology: ["React", "MUI", "AlanAI API", "NewsAPI API"],
+      github: "https://github.com/HoangTienDinh/alan-ai-react",
+      website: "https://alan-news-application.netlify.app/",
     },
     {
-      title: "Test Two",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
+      title: "Of Course!",
+      description: "An online study assistant tool, allowing users to create decks of flash cards. These decks can also be shared amongst other users and searched/filtered by their metadata.",
       image: picture,
-      technology: ["React", "Firebase", "Tailwind"],
-      github: "",
-      website: "http://www.hoangtiendinh.com",
+      technology: ["React", "React-Spring", "Express", "PSQL", "Node"],
+      github: "https://github.com/HoangTienDinh/Of-Course",
+      website: "",
     },
     {
-      title: "TEST THREE",
-      description: "OMG IT'S ONE OF THE TOP THREEEEEEEEEEEEEE",
+      title: "Portfolio Site",
+      description: "A portfolio website, with the concept of being designed as a template for other creators to showcase their work. Coded to be modular and easy to plug in one's own portfolio information.",
       image: picture,
-      technology: ["Javascript", "Alan AI", "Firebase"],
+      technology: ["Javascript", "React", "react-reveal"],
       github: "https://www.github.com",
       website: "",
     },
@@ -32,7 +31,7 @@ const portfolio = {
     {
       title: "Proj One",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet.",
       image: "",
       technology: ["React", "Ruby", "HTML", "Ruby on Rails"],
       github: "www.github.com",
@@ -41,7 +40,7 @@ const portfolio = {
     {
       title: "Proj Two",
       description:
-        "Suspendisse lacinia lectus urna, sit amet hendrerit dolor porttitor eget. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc consectetur vehicula nisl, vel porttitor sem porttitor vitae. Quisque rhoncus quam sit amet nisl vehicula vestibulum. Sed molestie sem tincidunt orci ullamcorper, vestibulum rutrum dolor tempor. Donec auctor dignissim magna, id convallis risus rutrum at. Vivamus vitae ornare velit. In pellentesque maximus sapien, sit amet varius mi consectetur in. Etiam ultrices turpis ac nisi congue luctus. Nam ultrices ex id pulvinar eleifend. Pellentesque elementum arcu sapien, vitae blandit velit facilisis sed. Aenean et dignissim ante. Mauris at magna sit amet eros euismod sollicitudin. Cras bibendum lectus vel nisl tincidunt blandit. Integer placerat dolor vel dapibus semper.",
+        "Suspendisse lacinia lectus urna, sit amet hendrerit dolor porttitor eget. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
       image: "",
       technology: ["React", "Javascript", "HTML", "CSS"],
       github: "www.github.com",
