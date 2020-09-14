@@ -19,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     height: "inherit",
   },
+  headline: {
+    color: "#cccccc",
+  },
+  description: {
+    color: "#E6E6CC",
+  },
 }));
 
 const About = () => {
@@ -43,8 +49,12 @@ const About = () => {
         </Reveal>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <Reveal right>
-            <Typography variant="h3">{headline}</Typography>
-            <Typography>{description}</Typography>
+            <Typography className={classes.headline} variant="h3">
+              {headline}
+            </Typography>
+            <Typography className={classes.description}>
+              {description}
+            </Typography>
           </Reveal>
         </Grid>
       </Grid>
