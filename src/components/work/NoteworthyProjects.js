@@ -23,20 +23,11 @@ const useStyles = makeStyles((theme) => ({
   },
   noteworthy: {
     color: "#cccccc",
-    textAlign: 'center',
+    textAlign: "center",
   },
-  grid: {
-    display: "grid",
-    gridGap: "15px",
-    position: "relative",
-    marginTop: "50px",
+  project: {
     border: "solid 1px black",
     padding: "5%",
-    maxWidth: 345,
-  },
-  container: {
-    display: "flex",
-    alignItems: "center",
   },
   title: {
     color: "#E6E6CC",
@@ -44,23 +35,15 @@ const useStyles = makeStyles((theme) => ({
   description: {
     color: "#6699CC",
   },
-  tech: {
-    display: "flex",
-  },
   technology: {
-    marginRight: "3%",
+    marginRight: theme.spacing(1),
     color: "#4060bf",
   },
   links: {
-    maxWidth: "fit-content",
     margin: theme.spacing(0.5),
     "&:hover": {
       color: "#FF9900",
     },
-  },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
   },
 }));
 
@@ -70,21 +53,24 @@ const NoteworthyProjects = () => {
   return (
     <Container className={classes.root}>
       <Reveal duration={2000} effect="fadeInUp">
-        <Typography variant='h3' className={classes.noteworthy}>
+        <Typography variant="h3" className={classes.noteworthy}>
           Noteworthy Projects
         </Typography>
       </Reveal>
-      <Grid
-        className={classes.container}
-        container
-        justify="space-evenly"
-        alignItems="center"
-        spacing={3}
-      >
+
+      <Grid container spacing={3}>
         {noteworthyProj.map((project, i) => (
-          <Reveal key={i} duration={i * 500} effect="fadeInUp">
-            <Grid className={classes.grid} item>
-              <Grid className={classes.header} item>
+          <Grid
+            container
+            item
+            xs={12}
+            md={8}
+            lg={4}
+            direction='column'
+            className={classes.project}
+          >
+            <Reveal duration={i * 500} effect="fadeInUp">
+              <Grid container item justify="space-between">
                 <FolderIcon />
                 <Grid item>
                   {project.github && (
@@ -107,21 +93,28 @@ const NoteworthyProjects = () => {
                   )}
                 </Grid>
               </Grid>
-              <Typography className={classes.title} variant="h6">
-                {project.title}
-              </Typography>
-              <Typography className={classes.description}>
-                {project.description}
-              </Typography>
-              <Grid className={classes.tech} item>
+
+              <Grid item>
+                <Typography className={classes.title} variant="h6">
+                  {project.title}
+                </Typography>
+              </Grid>
+
+              <Grid item>
+                <Typography className={classes.description}>
+                  {project.description}
+                </Typography>
+              </Grid>
+
+              <Grid container>
                 {project.technology.map((tech, i) => (
-                  <Typography key={i} className={classes.technology}>
-                    {tech}
-                  </Typography>
+                  <Grid item key={i} className={classes.technology}>
+                    <Typography>{tech}</Typography>
+                  </Grid>
                 ))}
               </Grid>
-            </Grid>
-          </Reveal>
+            </Reveal>
+          </Grid>
         ))}
       </Grid>
     </Container>
