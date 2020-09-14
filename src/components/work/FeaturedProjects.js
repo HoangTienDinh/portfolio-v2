@@ -15,9 +15,6 @@ import data from "../../data/data";
 const { featuredProj } = data.portfolio;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  },
   projectContainer: {
     display: "grid",
     gap: "10px",
@@ -84,11 +81,13 @@ const useStyles = makeStyles((theme) => ({
   techWrapperLeft: {
     display: "flex",
     marginBottom: theme.spacing(1),
+    color: "#8BADC1",
   },
   techWrapperRight: {
     display: "flex",
     justifyContent: "flex-end",
     marginBottom: theme.spacing(1),
+    color: "#8BADC1",
   },
   styledTechLeft: {
     marginLeft: theme.spacing(1),
@@ -170,7 +169,9 @@ const FeaturedProjects = () => {
             href={project.website ? project.website : project.github}
             onClick={preventDefault}
           >
-            <Typography className={title} variant='h5'>{project.title}</Typography>
+            <Typography className={title} variant="h5">
+              {project.title}
+            </Typography>
           </Link>
           <Typography className={description}>{project.description}</Typography>
           <Grid item className={techWrapper}>
