@@ -14,11 +14,18 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
     bottom: 0,
     right: 0,
-    position: 'fixed',
+    position: "fixed",
   },
   links: {
     maxWidth: "fit-content",
     margin: theme.spacing(0.5),
+    top: 0,
+    transition: "top ease 0.5s",
+    position: "relative",
+    "&:hover": {
+      color: "#FF9900",
+      top: theme.spacing(-1),
+    },
   },
 }));
 
