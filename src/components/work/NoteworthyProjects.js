@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10%",
     marginBottom: "10%",
   },
+  noteworthy: {
+    color: "#cccccc",
+    textAlign: 'center',
+  },
   grid: {
     display: "grid",
     gridGap: "15px",
@@ -65,9 +69,11 @@ const NoteworthyProjects = () => {
 
   return (
     <Container className={classes.root}>
-      <Typography variant="h3" align="center">
-        Noteworthy Projects
-      </Typography>
+      <Reveal duration={2000} effect="fadeInUp">
+        <Typography variant='h3' className={classes.noteworthy}>
+          Noteworthy Projects
+        </Typography>
+      </Reveal>
       <Grid
         className={classes.container}
         container
