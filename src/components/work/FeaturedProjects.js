@@ -170,7 +170,7 @@ const FeaturedProjects = () => {
             href={project.website ? project.website : project.github}
             onClick={preventDefault}
           >
-            <Typography className={title}>{project.title}</Typography>
+            <Typography className={title} variant='h5'>{project.title}</Typography>
           </Link>
           <Typography className={description}>{project.description}</Typography>
           <Grid item className={techWrapper}>
@@ -182,12 +182,16 @@ const FeaturedProjects = () => {
           </Grid>
           <Grid item className={linkWrapper}>
             {project.github && (
-              <Link className={styledLink}>
+              <Link className={styledLink} href={project.github} target="blank">
                 <GitHubIcon />
               </Link>
             )}
             {project.website && (
-              <Link className={styledLink}>
+              <Link
+                className={styledLink}
+                href={project.website}
+                target="blank"
+              >
                 <OpenInNewIcon />
               </Link>
             )}
