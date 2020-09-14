@@ -21,21 +21,26 @@ const useStyles = makeStyles(() => ({
     gap: "10px",
     gridTemplateColumns: "repeat(12, 1fr)",
     alignItems: "center",
-    backgroundColor: "blue",
     marginBottom: "100px",
-  },
-  right: {
-    backgroundColor: "red",
+    border: "2px solid black",
   },
   media: {
     height: 0,
     paddingTop: "56.25%",
   },
-  contentLeft: {
+  contentRight: {
     gridColumn: "7 / -1",
     textAlign: "right",
     gridArea: "1 / 1 / -1 / 7",
     position: "relative",
+    zIndex: "1",
+  },
+  contentLeft: {
+    gridColumn: "1 / -1",
+    textAlign: "left",
+    gridArea: "1 / 1 / -1 / 7",
+    position: "relative",
+    zIndex: "1",
   },
   imageLeft: {
     gridColumn: "1 / 8",
@@ -43,7 +48,13 @@ const useStyles = makeStyles(() => ({
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
-    zIndex: "1",
+  },
+  imageRight: {
+    gridColumn: "48 / 8",
+    boxShadow: "0 10px 30px -15px black",
+    transition: "var(--transtion)",
+    gridArea: "1 / 6 / -1 / -1",
+    position: "relative",
   },
 }));
 
@@ -56,14 +67,12 @@ const FeaturedProjects = () => {
     let contentContainer;
     let imageContainer;
 
-
-
     if (index === 0 || index % 2 === 0) {
-      contentContainer = classes.contentLeft
-      imageContainer = classes.imageLeft
+      contentContainer = classes.contentRight;
+      imageContainer = classes.imageLeft;
     } else {
-        contentContainer = classes.contentRight
-        imageContainer = classes.imageRight
+      contentContainer = classes.contentLeft;
+      imageContainer = classes.imageRight;
     }
 
     // if (index === 0 || index % 2 === 0) {
@@ -71,36 +80,36 @@ const FeaturedProjects = () => {
     //   contentContainer = classes.contentLeft
     //   imageContainer = classes.imageLeft
 
-      return (
-        <Grid Container key={index} className={classes.projectContainer}>
-          <Grid item className={imageContainer}>
-            <Link
-              href={project.website ? project.website : project.github}
-              onClick={preventDefault}
-            >
-              <CardMedia
-                className={classes.media}
-                image={project.image}
-                title={project.title}
-              />
-            </Link>
-          </Grid>
-          <Grid item className={contentContainer}>
-            <Link
-              href={project.website ? project.website : project.github}
-              onClick={preventDefault}
-            >
-              <Typography>{project.title}</Typography>
-            </Link>
-            <Typography>{project.description}</Typography>
-            {project.technology.map((tech, i) => (
-              <Typography key={i}>{tech}</Typography>
-            ))}
-          </Grid>
+    return (
+      <Grid Container key={index} className={classes.projectContainer}>
+        <Grid item className={imageContainer}>
+          <Link
+            href={project.website ? project.website : project.github}
+            onClick={preventDefault}
+          >
+            <CardMedia
+              className={classes.media}
+              image={project.image}
+              title={project.title}
+            />
+          </Link>
         </Grid>
-      );
-    // } 
-    
+        <Grid item className={contentContainer}>
+          <Link
+            href={project.website ? project.website : project.github}
+            onClick={preventDefault}
+          >
+            <Typography>{project.title}</Typography>
+          </Link>
+          <Typography>{project.description}</Typography>
+          {project.technology.map((tech, i) => (
+            <Typography key={i}>{tech}</Typography>
+          ))}
+        </Grid>
+      </Grid>
+    );
+    // }
+
     // else {
     //   return (
     //     <Grid Container key={index} className={classes.right}>
@@ -132,8 +141,6 @@ const FeaturedProjects = () => {
     //     </Grid>
     //   );
     // }
-
-
   };
 
   return (
