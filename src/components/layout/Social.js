@@ -37,28 +37,28 @@ const Social = () => {
       <Link
         className={classes.links}
         href="https://github.com/HoangTienDinh"
-        target="blank"
+        target="_blank"
       >
         <GitHubIcon />
       </Link>
       <Link
         className={classes.links}
         href="https://www.linkedin.com/in/hoangdinh90/"
-        target="blank"
+        target="_blank"
       >
         <LinkedInIcon />
       </Link>
       <Link
         className={classes.links}
         href="https://www.instagram.com/hohohoang/"
-        target="blank"
+        target="_blank"
       >
         <InstagramIcon />
       </Link>
       <Link
         className={classes.links}
         href="mailto:hoangdinh90@gmail.com"
-        target="blank"
+        target="_blank"
       >
         <EmailIcon />
       </Link>

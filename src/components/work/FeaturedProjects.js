@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "100px",
   },
   media: {
-    height: 0,
+    height: "100%",
     paddingTop: "56.25%",
   },
   contentLeft: {
@@ -57,10 +57,16 @@ const useStyles = makeStyles((theme) => ({
   titleLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
   titleRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
   descriptionLeft: {
     marginLeft: theme.spacing(1),
@@ -110,15 +116,20 @@ const useStyles = makeStyles((theme) => ({
   },
   styledLinkLeft: {
     marginLeft: theme.spacing(1),
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
   styledLinkRight: {
     marginRight: theme.spacing(1),
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
 }));
 
 const FeaturedProjects = () => {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
 
   const handleSide = (project, index) => {
     let contentContainer;
@@ -155,7 +166,7 @@ const FeaturedProjects = () => {
         <Grid item className={imageContainer}>
           <Link
             href={project.website ? project.website : project.github}
-            onClick={preventDefault}
+            target="_blank"
           >
             <CardMedia
               className={classes.media}
@@ -167,7 +178,7 @@ const FeaturedProjects = () => {
         <Grid item className={contentContainer}>
           <Link
             href={project.website ? project.website : project.github}
-            onClick={preventDefault}
+            target="_blank"
           >
             <Typography className={title} variant="h5">
               {project.title}
@@ -191,7 +202,7 @@ const FeaturedProjects = () => {
               <Link
                 className={styledLink}
                 href={project.website}
-                target="blank"
+                target="_blank"
               >
                 <OpenInNewIcon />
               </Link>
