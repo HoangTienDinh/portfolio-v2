@@ -34,17 +34,25 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  title: {},
-  description: {},
+  title: {
+    color: "#E6E6CC",
+  },
+  description: {
+    color: "#6699CC",
+  },
   tech: {
     display: "flex",
   },
   technology: {
     marginRight: "3%",
+    color: "#4060bf",
   },
   links: {
     maxWidth: "fit-content",
     margin: theme.spacing(0.5),
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
   header: {
     display: "flex",
@@ -101,7 +109,9 @@ const NoteworthyProjects = () => {
               </Typography>
               <Grid className={classes.tech} item>
                 {project.technology.map((tech, i) => (
-                  <Typography key={i} className={classes.technology}>{tech}</Typography>
+                  <Typography key={i} className={classes.technology}>
+                    {tech}
+                  </Typography>
                 ))}
               </Grid>
             </Grid>
