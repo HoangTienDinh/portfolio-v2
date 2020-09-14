@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "1",
   },
   contentLeft: {
-    gridColumn: "1 / -1",
+    gridColumn: "1 / -4",
     textAlign: "left",
     gridArea: "1 / 1 / -1 / 7",
     position: "relative",
@@ -63,16 +63,6 @@ const useStyles = makeStyles((theme) => ({
   techWrapperLeft: {
     display: "flex",
   },
-  styledTechRight: {
-    marginRight: theme.spacing(1),
-    padding: theme.spacing(1),
-    border: "2px solid black",
-  },
-  styledTechLeft: {
-    marginLeft: theme.spacing(1),
-    padding: theme.spacing(1),
-    border: "2px solid black",
-  },
   titleRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
@@ -80,6 +70,34 @@ const useStyles = makeStyles((theme) => ({
   titleLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
+  },
+  descriptionRight: {
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    padding: theme.spacing(3),
+    color: '#8BADC1',
+    background: '#102a44',
+  },
+  descriptionLeft: {
+    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    padding: theme.spacing(3),
+    color: '#8BADC1',
+    background: '#102a44',
+  },
+  styledTechRight: {
+    marginRight: theme.spacing(1),
+    padding: theme.spacing(1),
+    border: "2px solid black",
+    marginBottom: theme.spacing(1),
+  },
+  styledTechLeft: {
+    marginLeft: theme.spacing(1),
+    padding: theme.spacing(1),
+    border: "2px solid black",
+    marginBottom: theme.spacing(1),
   },
 }));
 
@@ -102,12 +120,15 @@ const FeaturedProjects = () => {
       techWrapper = classes.techWrapperRight;
       styledTech = classes.styledTechRight;
       title = classes.titleRight;
+      description = classes.descriptionRight;
+
     } else {
       imageContainer = classes.imageRight;
       contentContainer = classes.contentLeft;
       techWrapper = classes.techWrapperLeft;
       styledTech = classes.styledTechLeft;
       title = classes.titleLeft;
+      description = classes.descriptionLeft;
     }
 
     return (
@@ -131,7 +152,7 @@ const FeaturedProjects = () => {
           >
             <Typography className={title}>{project.title}</Typography>
           </Link>
-          <Typography>{project.description}</Typography>
+          <Typography className={description}>{project.description}</Typography>
           <Grid item className={techWrapper}>
             {project.technology.map((tech, i) => (
               <Typography key={i} className={styledTech}>
