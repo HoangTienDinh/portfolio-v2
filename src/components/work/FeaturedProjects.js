@@ -162,7 +162,7 @@ const FeaturedProjects = () => {
     }
 
     return (
-      <Grid Container key={index} className={classes.projectContainer}>
+      <Grid container key={index} className={classes.projectContainer}>
         <Grid item className={imageContainer}>
           <Link
             href={project.website ? project.website : project.github}
@@ -216,7 +216,7 @@ const FeaturedProjects = () => {
   return (
     <Container>
       {featuredProj.map((proj, ind) => (
-        <Reveal key={ind} duration="2000" effect="fadeInUp">
+        <Reveal key={ind} duration={2000} effect="fadeInUp">
           {handleSide(proj, ind)}
         </Reveal>
       ))}

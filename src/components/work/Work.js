@@ -5,9 +5,10 @@ import { Container, Typography } from "@material-ui/core";
 import Reveal from "react-reveal/Reveal";
 
 const Work = () => {
+
   return (
     <Container id="work">
-      <Reveal duration="2000" effect="fadeInUp">
+      <Reveal duration={2000} effect="fadeInUp">
         <Container>
           <Typography variant="h3">Some Things I've Built. </Typography>
         </Container>
