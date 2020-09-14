@@ -12,7 +12,7 @@ import data from "../../data/data";
 
 const { featuredProj } = data.portfolio;
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
@@ -56,6 +56,31 @@ const useStyles = makeStyles(() => ({
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
   },
+  techWrapperRight: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
+  techWrapperLeft: {
+    display: "flex",
+  },
+  styledTechRight: {
+    marginRight: theme.spacing(1),
+    padding: theme.spacing(1),
+    border: "2px solid black",
+  },
+  styledTechLeft: {
+    marginLeft: theme.spacing(1),
+    padding: theme.spacing(1),
+    border: "2px solid black",
+  },
+  titleRight: {
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
+  },
+  titleLeft: {
+    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(1),
+  },
 }));
 
 const FeaturedProjects = () => {
@@ -65,13 +90,24 @@ const FeaturedProjects = () => {
   const handleSide = (project, index) => {
     let contentContainer;
     let imageContainer;
+    let techWrapper;
+    let styledTech;
+    let title;
+    let description;
+    let linkWrapper;
 
     if (index === 0 || index % 2 === 0) {
-      contentContainer = classes.contentRight;
       imageContainer = classes.imageLeft;
+      contentContainer = classes.contentRight;
+      techWrapper = classes.techWrapperRight;
+      styledTech = classes.styledTechRight;
+      title = classes.titleRight;
     } else {
-      contentContainer = classes.contentLeft;
       imageContainer = classes.imageRight;
+      contentContainer = classes.contentLeft;
+      techWrapper = classes.techWrapperLeft;
+      styledTech = classes.styledTechLeft;
+      title = classes.titleLeft;
     }
 
     return (
@@ -93,12 +129,16 @@ const FeaturedProjects = () => {
             href={project.website ? project.website : project.github}
             onClick={preventDefault}
           >
-            <Typography>{project.title}</Typography>
+            <Typography className={title}>{project.title}</Typography>
           </Link>
           <Typography>{project.description}</Typography>
-          {project.technology.map((tech, i) => (
-            <Typography key={i}>{tech}</Typography>
-          ))}
+          <Grid item className={techWrapper}>
+            {project.technology.map((tech, i) => (
+              <Typography key={i} className={styledTech}>
+                {tech}
+              </Typography>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
     );
