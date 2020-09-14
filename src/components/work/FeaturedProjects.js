@@ -24,22 +24,21 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
     alignItems: "center",
     marginBottom: "100px",
-    border: "2px solid black",
   },
   media: {
     height: 0,
     paddingTop: "56.25%",
   },
-  contentRight: {
-    gridColumn: "7 / -1",
-    textAlign: "right",
+  contentLeft: {
+    gridColumn: "1 / -4",
+    textAlign: "left",
     gridArea: "1 / 1 / -1 / 7",
     position: "relative",
     zIndex: "1",
   },
-  contentLeft: {
-    gridColumn: "1 / -4",
-    textAlign: "left",
+  contentRight: {
+    gridColumn: "7 / -1",
+    textAlign: "right",
     gridArea: "1 / 1 / -1 / 7",
     position: "relative",
     zIndex: "1",
@@ -58,48 +57,63 @@ const useStyles = makeStyles((theme) => ({
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
   },
-  techWrapperRight: {
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  techWrapperLeft: {
-    display: "flex",
-  },
-  titleRight: {
-    marginRight: theme.spacing(1),
-    marginTop: theme.spacing(1),
-  },
   titleLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
   },
-  descriptionRight: {
+  titleRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-    padding: theme.spacing(3),
-    color: '#8BADC1',
-    background: '#102a44',
   },
   descriptionLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     padding: theme.spacing(3),
-    color: '#8BADC1',
-    background: '#102a44',
+    color: "#8BADC1",
+    background: "#102a44",
   },
-  styledTechRight: {
+  descriptionRight: {
     marginRight: theme.spacing(1),
-    padding: theme.spacing(1),
-    border: "2px solid black",
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    padding: theme.spacing(3),
+    color: "#8BADC1",
+    background: "#102a44",
+  },
+  techWrapperLeft: {
+    display: "flex",
+    marginBottom: theme.spacing(1),
+  },
+  techWrapperRight: {
+    display: "flex",
+    justifyContent: "flex-end",
     marginBottom: theme.spacing(1),
   },
   styledTechLeft: {
     marginLeft: theme.spacing(1),
     padding: theme.spacing(1),
     border: "2px solid black",
+  },
+  styledTechRight: {
+    marginRight: theme.spacing(1),
+    padding: theme.spacing(1),
+    border: "2px solid black",
+  },
+  linkWrapperLeft: {
+    display: "flex",
     marginBottom: theme.spacing(1),
+  },
+  linkWrapperRight: {
+    display: "flex",
+    justifyContent: "flex-end",
+    marginBottom: theme.spacing(1),
+  },
+  styledLinkLeft: {
+    marginLeft: theme.spacing(1),
+  },
+  styledLinkRight: {
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -115,6 +129,7 @@ const FeaturedProjects = () => {
     let title;
     let description;
     let linkWrapper;
+    let styledLink;
 
     if (index === 0 || index % 2 === 0) {
       imageContainer = classes.imageLeft;
@@ -123,7 +138,8 @@ const FeaturedProjects = () => {
       styledTech = classes.styledTechRight;
       title = classes.titleRight;
       description = classes.descriptionRight;
-
+      linkWrapper = classes.linkWrapperRight;
+      styledLink = classes.styledLinkRight;
     } else {
       imageContainer = classes.imageRight;
       contentContainer = classes.contentLeft;
@@ -131,6 +147,8 @@ const FeaturedProjects = () => {
       styledTech = classes.styledTechLeft;
       title = classes.titleLeft;
       description = classes.descriptionLeft;
+      linkWrapper = classes.linkWrapperLeft;
+      styledLink = classes.styledLinkLeft;
     }
 
     return (
@@ -163,8 +181,16 @@ const FeaturedProjects = () => {
             ))}
           </Grid>
           <Grid item className={linkWrapper}>
-            {project.github && <Link><GitHubIcon /></Link>}
-            {project.website && <Link><OpenInNewIcon /></Link>}
+            {project.github && (
+              <Link className={styledLink}>
+                <GitHubIcon />
+              </Link>
+            )}
+            {project.website && (
+              <Link className={styledLink}>
+                <OpenInNewIcon />
+              </Link>
+            )}
           </Grid>
         </Grid>
       </Grid>
