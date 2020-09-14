@@ -4,7 +4,7 @@ const portfolio = {
   featuredProj: [
     {
       title: "Test One",
-      description: "Here is some information about Test One, my best Test",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
       image: picture,
       technology: ["React", "Javascript", "MUI"],
       github: "https://www.github.com",
@@ -13,7 +13,7 @@ const portfolio = {
     {
       title: "Test Two",
       description:
-        "Sure here is some more dummy information, but it's on TEST TWO",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
       image: picture,
       technology: ["React", "Firebase", "Tailwind"],
       github: "www.github.com",
@@ -32,7 +32,7 @@ const portfolio = {
     {
       title: "Proj One",
       description:
-        "A small little blurb about this cool project I did letting users do BLAH",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet. Praesent a vehicula leo, vitae mattis sem. Fusce id purus augue. Nullam enim magna, finibus id posuere in, pharetra non odio. Aliquam placerat euismod libero, vitae ultrices sem faucibus sed. Maecenas ultricies nulla eu mollis commodo. Nullam mollis auctor purus, sed pharetra erat tincidunt malesuada. Ut varius porttitor egestas. Nam in metus vel ligula ullamcorper ultrices at id elit.",
       image: "",
       technology: ["React", "Ruby", "HTML", "Ruby on Rails"],
       github: "www.github.com",
@@ -41,7 +41,7 @@ const portfolio = {
     {
       title: "Proj Two",
       description:
-        "A small little blurb about this cool project I did letting users do BLAH",
+        "Suspendisse lacinia lectus urna, sit amet hendrerit dolor porttitor eget. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc consectetur vehicula nisl, vel porttitor sem porttitor vitae. Quisque rhoncus quam sit amet nisl vehicula vestibulum. Sed molestie sem tincidunt orci ullamcorper, vestibulum rutrum dolor tempor. Donec auctor dignissim magna, id convallis risus rutrum at. Vivamus vitae ornare velit. In pellentesque maximus sapien, sit amet varius mi consectetur in. Etiam ultrices turpis ac nisi congue luctus. Nam ultrices ex id pulvinar eleifend. Pellentesque elementum arcu sapien, vitae blandit velit facilisis sed. Aenean et dignissim ante. Mauris at magna sit amet eros euismod sollicitudin. Cras bibendum lectus vel nisl tincidunt blandit. Integer placerat dolor vel dapibus semper.",
       image: "",
       technology: ["React", "Javascript", "HTML", "CSS"],
       github: "www.github.com",
