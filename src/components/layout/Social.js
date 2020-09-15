@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: theme.spacing(3),
     position: "fixed",
+    zIndex: "10",
   },
   links: {
     height: theme.spacing(4),

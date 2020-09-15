@@ -5,11 +5,12 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
+import { FullscreenExit } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    bottom: 0,
-    position: 'absolute',
+    bottom: theme.spacing(2),
+    position: "absolute",
     width: "100%",
   },
   footer: {
@@ -30,15 +31,24 @@ const useStyles = makeStyles((theme) => ({
       top: theme.spacing(-1),
     },
   },
+  icons: {
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
 }));
 
 const Footer = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" alignContent="center" className={classes.root}>
+    <Grid
+      container
+      direction="column"
+      alignContent="center"
+      className={classes.root}
+    >
       <Hidden only={["lg", "xl"]}>
-        <Grid item >
+        <Grid item className={classes.icons}>
           <Link
             className={classes.links}
             href="https://github.com/HoangTienDinh"
