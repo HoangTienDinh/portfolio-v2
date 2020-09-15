@@ -8,7 +8,8 @@ import EmailIcon from "@material-ui/icons/Email";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    bottom: theme.spacing(1),
+    bottom: 0,
+    position: 'absolute',
     width: "100%",
   },
   footer: {
