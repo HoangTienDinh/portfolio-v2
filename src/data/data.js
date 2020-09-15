@@ -4,7 +4,8 @@ const portfolio = {
   featuredProj: [
     {
       title: "Alan News",
-      description: "Built with the intention to learn how to create an interactive chat bot. Working with AlanAI API to allow users to fetch news articles from the NewsAPI API with voice commands.",
+      description:
+        "Built with the intention to learn how to create an interactive chat bot. Working with AlanAI API to allow users to fetch news articles from the NewsAPI API with voice commands.",
       image: picture,
       technology: ["React", "MUI", "AlanAI API", "NewsAPI API"],
       github: "https://github.com/HoangTienDinh/alan-ai-react",
@@ -12,7 +13,8 @@ const portfolio = {
     },
     {
       title: "Of Course!",
-      description: "An online study assistant tool, allowing users to create decks of flash cards. These decks can also be shared amongst other users and searched/filtered by their metadata.",
+      description:
+        "An online study assistant tool, allowing users to create decks of flash cards. These decks can also be shared amongst other users and searched/filtered by their metadata.",
       image: picture,
       technology: ["React", "React-Spring", "Express", "PSQL", "Node"],
       github: "https://github.com/HoangTienDinh/Of-Course",
@@ -20,7 +22,8 @@ const portfolio = {
     },
     {
       title: "Portfolio Site",
-      description: "A portfolio website, with the concept of being designed as a template for other creators to showcase their work. Coded to be modular and easy to plug in one's own portfolio information.",
+      description:
+        "A portfolio website, with the concept of being designed as a template for other creators to showcase their work. Coded to be modular and easy to plug in one's own portfolio information.",
       image: picture,
       technology: ["Javascript", "React", "react-reveal"],
       github: "https://www.github.com",
@@ -58,7 +61,7 @@ const portfolio = {
     {
       title: "Proj Four",
       description:
-        "A small little blurb about this cool project I did letting users do BLAH",
+        "A small little blurb about this cool project I did letting users do BLAH, A small little blurb about this cool project I did letting users do BLAH",
       image: "",
       technology: ["React", "Javascript", "HTML", "CSS"],
       github: "www.github.com",
@@ -67,7 +70,7 @@ const portfolio = {
     {
       title: "Proj Five",
       description:
-        "A small little blurb about this cool project I did letting users do BLAH",
+        "A small little blurb about this A small little blurb about this cool project I did letting users do BLAHA small little blurb about this cool project I did letting users do BLAH",
       image: "",
       technology: ["React", "Javascript", "HTML", "CSS"],
       github: "www.github.com",
