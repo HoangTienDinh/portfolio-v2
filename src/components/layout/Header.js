@@ -1,23 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
-import Hidden from "@material-ui/core/Hidden";
 import MenuIcon from "@material-ui/icons/Menu";
-import IconButton from "@material-ui/core/IconButton";
-import Popper from "@material-ui/core/Popper";
-import Paper from "@material-ui/core/Paper";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
-import Grow from "@material-ui/core/Grow";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  CssBaseline,
+  Slide,
+  Button,
+  Link,
+  Hidden,
+  IconButton,
+  Popper,
+  Paper,
+  ClickAwayListener,
+  MenuItem,
+  MenuList,
+  Grow,
+  useScrollTrigger,
+} from "@material-ui/core";
+
 import Resume from "../../assets/Hoang Dinh Resume.pdf";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 function HideOnScroll({ children, window }) {
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
   return (
@@ -54,15 +56,6 @@ function HideOnScroll({ children, window }) {
     </Slide>
   );
 }
-
-HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 const Header = (props) => {
   const [open, setOpen] = useState(false);

@@ -64,6 +64,7 @@ const NoteworthyProjects = () => {
             <Grid
               container
               item
+              key={i}
               xs={12}
               sm={8}
               md={8}
