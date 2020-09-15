@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "56.25%",
   },
   contentLeft: {
-    gridColumn: "1 / -4",
+    gridColumn: "1 / 7",
     textAlign: "left",
     gridArea: "1 / 1 / -1 / 7",
     position: "relative",
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   imageRight: {
-    gridColumn: "48 / 8",
+    gridColumn: "5 / 13",
     boxShadow: "0 10px 30px -15px black",
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
