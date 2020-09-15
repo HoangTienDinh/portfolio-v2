@@ -88,7 +88,9 @@ const portfolio = {
   ],
   aboutMe: {
     headline: "A Little Bit About Me",
-    description: "Here's some info that I think makes me sounds cool",
+    description:
+      "A little about me, I'm a Full-Stack Web Developer, that enjoys manipulating the Front-End.  Graduating from Lighthouse Labs Web Development Bootcamp program in March, a 12-week all day program, full of lectures, mentors, projects, and guest speakers.  Before this program I was freelancing as a photographer and running a bakery off instagram.  I have a driven curiosity that keeps me constantly learning, to provide amazing products and services with every project.",
+    currentTech: ["React", "MUI", "Firebase", "Javascript", "Python", "Node"],
   },
 };
 

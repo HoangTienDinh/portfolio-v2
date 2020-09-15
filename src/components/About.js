@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
 import data from "../data/data";
 
-const { headline, description } = data.portfolio.aboutMe;
+const { headline, description, currentTech } = data.portfolio.aboutMe;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,10 +21,16 @@ const useStyles = makeStyles((theme) => ({
   },
   headline: {
     color: "#cccccc",
+    marginBottom: theme.spacing(5),
   },
   description: {
     color: "#E6E6CC",
+    marginBottom: theme.spacing(3),
   },
+  te: {
+    color: "#E6E6CC",
+  },
+  technology: {},
 }));
 
 const About = () => {
@@ -47,7 +53,16 @@ const About = () => {
             />
           </Grid>
         </Reveal>
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+
+        <Grid
+          container
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          justify="space-between"
+        >
           <Reveal right>
             <Typography className={classes.headline} variant="h3">
               {headline}
@@ -55,6 +70,16 @@ const About = () => {
             <Typography className={classes.description}>
               {description}
             </Typography>
+          </Reveal>
+          <Reveal up>
+            <Typography className={classes.te}>
+              Here are a few Technologies I've been working with:
+            </Typography>
+            <Grid container>
+              {currentTech.map((tech, i) => (
+                <Typography key={i}>-{tech}</Typography>
+              ))}
+            </Grid>
           </Reveal>
         </Grid>
       </Grid>

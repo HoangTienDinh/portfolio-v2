@@ -1,10 +1,14 @@
 import React from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../assets/newWest.jpg";
 import Typography from "@material-ui/core/Typography";
 import { Box } from "@material-ui/core";
 import Typist from "react-typist";
+
+import Image from "../assets/newWest.jpg";
+import imageOne from "../assets/imageOne.jpg";
+import imageTwo from "../assets/imageTwo.jpg";
+import imageThree from "../assets/imageThree.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +41,7 @@ const Landing = () => {
           <Typography className={classes.name} variant="h3">
             Hoang Dinh
           </Typography>
-        <Typist.Delay ms={200} />
+          <Typist.Delay ms={200} />
           <Typography className={classes.headline} variant="h3">
             Photographer
           </Typography>
