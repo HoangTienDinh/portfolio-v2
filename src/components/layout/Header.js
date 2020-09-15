@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import {
@@ -29,8 +28,22 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
-  buttons: {
+  links: {
+    maxWidth: "fit-content",
+    margin: theme.spacing(0.5),
+    top: 0,
+    transition: "top ease 0.5s",
+    position: "relative",
+    "&:hover": {
+      color: "#FF9900",
+      top: theme.spacing(-1),
+    },
+  },
+  button: {
     color: "white",
+    "&:hover": {
+      color: "#FF9900",
+    },
   },
   layout: {
     display: "flex",
@@ -100,20 +113,20 @@ const Header = (props) => {
             <Typography variant="h6">Hoang Dinh</Typography>
             <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
-                <Link href="#about">
-                  <Button className={classes.buttons}>About</Button>
+                <Link className={classes.links} href="#about">
+                  <Button className={classes.button}>About</Button>
                 </Link>
 
-                <Link href="#work">
-                  <Button className={classes.buttons}>Work</Button>
+                <Link className={classes.links} href="#work">
+                  <Button className={classes.button}>Work</Button>
                 </Link>
 
-                <Link href="#contact">
-                  <Button className={classes.buttons}>Contact</Button>
+                <Link className={classes.links} href="#contact">
+                  <Button className={classes.button}>Contact</Button>
                 </Link>
 
-                <Link href={Resume} target="blank">
-                  <Button className={classes.buttons}>Resume</Button>
+                <Link className={classes.links} href={Resume} target="blank">
+                  <Button className={classes.button}>Resume</Button>
                 </Link>
               </Toolbar>
             </Hidden>
