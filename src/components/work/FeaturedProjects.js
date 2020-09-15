@@ -6,6 +6,7 @@ import {
   makeStyles,
   Typography,
   Link,
+  Hidden,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
@@ -126,6 +127,20 @@ const useStyles = makeStyles((theme) => ({
       color: "#FF9900",
     },
   },
+  mobileContentLeft: {
+    gridColumn: "2 / 12",
+    textAlign: "left",
+    gridArea: "1 / 1 / -1 / 7",
+    position: "relative",
+    zIndex: "1",
+  },
+  mobileContentRight: {
+    gridColumn: "2 / 12",
+    textAlign: "right",
+    gridArea: "1 / 1 / -1 / 7",
+    position: "relative",
+    zIndex: "1",
+  },
 }));
 
 const FeaturedProjects = () => {
@@ -140,6 +155,7 @@ const FeaturedProjects = () => {
     let description;
     let linkWrapper;
     let styledLink;
+    let mobileContentContainer;
 
     if (index === 0 || index % 2 === 0) {
       imageContainer = classes.imageLeft;
@@ -150,6 +166,7 @@ const FeaturedProjects = () => {
       description = classes.descriptionRight;
       linkWrapper = classes.linkWrapperRight;
       styledLink = classes.styledLinkRight;
+      mobileContentContainer = classes.mobileContentRight;
     } else {
       imageContainer = classes.imageRight;
       contentContainer = classes.contentLeft;
@@ -159,56 +176,108 @@ const FeaturedProjects = () => {
       description = classes.descriptionLeft;
       linkWrapper = classes.linkWrapperLeft;
       styledLink = classes.styledLinkLeft;
+      mobileContentContainer = classes.mobileContentLeft;
     }
 
     return (
       <Grid container key={index} className={classes.projectContainer}>
-        <Grid item className={imageContainer}>
-          <Link
-            href={project.website ? project.website : project.github}
-            target="_blank"
-          >
-            <CardMedia
-              className={classes.media}
-              image={project.image}
-              title={project.title}
-            />
-          </Link>
-        </Grid>
-        <Grid item className={contentContainer}>
-          <Link
-            href={project.website ? project.website : project.github}
-            target="_blank"
-          >
-            <Typography className={title} variant="h5">
-              {project.title}
-            </Typography>
-          </Link>
-          <Typography className={description}>{project.description}</Typography>
-          <Grid item className={techWrapper}>
-            {project.technology.map((tech, i) => (
-              <Typography key={i} className={styledTech}>
-                {tech}
+        <Hidden only={["xs", "sm"]}>
+          <Grid item className={imageContainer}>
+            <Link
+              href={project.website ? project.website : project.github}
+              target="_blank"
+            >
+              <CardMedia
+                className={classes.media}
+                image={project.image}
+                title={project.title}
+              />
+            </Link>
+          </Grid>
+          <Grid item className={contentContainer}>
+            <Link
+              href={project.website ? project.website : project.github}
+              target="_blank"
+            >
+              <Typography className={title} variant="h5">
+                {project.title}
               </Typography>
-            ))}
+            </Link>
+            <Typography className={description}>
+              {project.description}
+            </Typography>
+            <Grid item className={techWrapper}>
+              {project.technology.map((tech, i) => (
+                <Typography key={i} className={styledTech}>
+                  {tech}
+                </Typography>
+              ))}
+            </Grid>
+            <Grid item className={linkWrapper}>
+              {project.github && (
+                <Link
+                  className={styledLink}
+                  href={project.github}
+                  target="blank"
+                >
+                  <GitHubIcon />
+                </Link>
+              )}
+              {project.website && (
+                <Link
+                  className={styledLink}
+                  href={project.website}
+                  target="_blank"
+                >
+                  <OpenInNewIcon />
+                </Link>
+              )}
+            </Grid>
           </Grid>
-          <Grid item className={linkWrapper}>
-            {project.github && (
-              <Link className={styledLink} href={project.github} target="blank">
-                <GitHubIcon />
-              </Link>
-            )}
-            {project.website && (
-              <Link
-                className={styledLink}
-                href={project.website}
-                target="_blank"
-              >
-                <OpenInNewIcon />
-              </Link>
-            )}
+        </Hidden>
+
+        <Hidden only={["md", "lg", "xl"]}>
+          <Grid item className={mobileContentContainer}>
+            <Link
+              href={project.website ? project.website : project.github}
+              target="_blank"
+            >
+              <Typography className={title} variant="h5">
+                {project.title}
+              </Typography>
+            </Link>
+            <Typography className={description}>
+              {project.description}
+            </Typography>
+            <Grid item className={techWrapper}>
+              {project.technology.map((tech, i) => (
+                <Typography key={i} className={styledTech}>
+                  {tech}
+                </Typography>
+              ))}
+            </Grid>
+            <Grid item className={linkWrapper}>
+              {project.github && (
+                <Link
+                  className={styledLink}
+                  href={project.github}
+                  target="blank"
+                >
+                  <GitHubIcon />
+                </Link>
+              )}
+              {project.website && (
+                <Link
+                  className={styledLink}
+                  href={project.website}
+                  target="_blank"
+                >
+                  <OpenInNewIcon />
+                </Link>
+              )}
+            </Grid>
           </Grid>
-        </Grid>
+        </Hidden>
       </Grid>
     );
   };
