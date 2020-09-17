@@ -131,15 +131,13 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "2 / 12",
     textAlign: "left",
     gridArea: "1 / 1 / -1 / 7",
-    position: "relative",
-    zIndex: "1",
+    zIndex: 2,
   },
   mobileContentRight: {
     gridColumn: "2 / 12",
     textAlign: "right",
     gridArea: "1 / 1 / -1 / 7",
-    position: "relative",
-    zIndex: "1",
+    zIndex: 2,
   },
 }));
 
