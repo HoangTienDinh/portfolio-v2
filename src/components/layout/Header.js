@@ -80,12 +80,11 @@ function HideOnScroll({ children, window }) {
 
 const Header = (props) => {
   const [open, setOpen] = useState(false);
-  const [scrollID, setScrollID] = useState("");
   const anchorRef = useRef(null);
   const classes = useStyles();
 
-  const handleScroll = () => {
-    scroller.scrollTo("about", {
+  const handleScroll = (event) => {
+    scroller.scrollTo(event, {
       duration: 1500,
       delay: 100,
       smooth: true,
@@ -131,15 +130,24 @@ const Header = (props) => {
             <Typography variant="h6">Hoang Dinh</Typography>
             <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
-                <Link className={classes.links} onClick={handleScroll}>
+                <Link
+                  className={classes.links}
+                  onClick={() => handleScroll("about")}
+                >
                   <Button className={classes.button}>About</Button>
                 </Link>
 
-                <Link className={classes.links} href="#work">
+                <Link
+                  className={classes.links}
+                  onClick={() => handleScroll("work")}
+                >
                   <Button className={classes.button}>Work</Button>
                 </Link>
 
-                <Link className={classes.links} href="#contact">
+                <Link
+                  className={classes.links}
+                  onClick={() => handleScroll("contact")}
+                >
                   <Button className={classes.button}>Contact</Button>
                 </Link>
 
