@@ -5,15 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
 import data from "../data/data";
 
-import {
-  Link as linkScroll,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
-
 const { headline, description, currentTech } = data.portfolio.aboutMe;
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +37,6 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Element name='about'>
       <Box id="about" name="about" className={classes.root}>
         <Grid
           className={classes.grid}
@@ -94,7 +84,6 @@ const About = () => {
           </Grid>
         </Grid>
       </Box>
-    </Element>
   );
 };
 

@@ -85,7 +85,7 @@ const Header = (props) => {
   const classes = useStyles();
 
   const handleScroll = () => {
-    scroller.scrollTo("MuiBox-root-24", {
+    scroller.scrollTo("about", {
       duration: 1500,
       delay: 100,
       smooth: true,
