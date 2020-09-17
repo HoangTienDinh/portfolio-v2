@@ -62,7 +62,7 @@ const About = () => {
         <Grid
           container
           item
-          xs={12}
+          xs={10}
           sm={6}
           md={4}
           lg={3}
@@ -109,7 +109,7 @@ const About = () => {
             <Typography className={classes.te}>
               Here are a few Technologies I've been working with:
             </Typography>
-            <Grid container spacing={12}>
+            <Grid container>
               {aboutMe.currentTech.map((tech, i) => (
                 <Grid item xs={4} key={i}>
                   <Typography className={classes.te}>▹ {tech}</Typography>
