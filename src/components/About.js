@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "inherit",
   },
+  mediaContainer: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+  },
   media: {
     height: 200,
     width: 200,
@@ -50,7 +54,14 @@ const About = () => {
         alignItems="center"
       >
         <Reveal left>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Grid
+            className={classes.mediaContainer}
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+          >
             <CardMedia
               className={classes.media}
               image={profilePicture}
