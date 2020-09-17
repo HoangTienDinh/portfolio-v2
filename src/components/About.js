@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Typography, CardMedia, Grid } from "@material-ui/core";
+import { Box, Typography, CardMedia, Grid, Link } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
 import data from "../data/data";
 
-const { headline, description, currentTech } = data.portfolio.aboutMe;
+const { headline, currentTech } = data.portfolio.aboutMe;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
   te: {
     color: "#E6E6CC",
   },
-  technology: {},
+  links: {
+    textDecoration: "none",
+    color: "#FF9900",
+  },
 }));
 
 const About = () => {
@@ -68,16 +71,47 @@ const About = () => {
               {headline}
             </Typography>
             <Typography className={classes.description}>
-              {description}
+              A little about me, I'm a Full-Stack Web Developer, that enjoys
+              manipulating the Front-End. Graduating from{" "}
+              <Link
+                className={classes.links}
+                href="https://www.lighthouselabs.ca/"
+                target="blank"
+              >
+                Lighthouse Labs
+              </Link>{" "}
+              Web Development Bootcamp program in March, a 12-week all day
+              program, full of lectures, mentors, projects, and guest speakers.
+              Before this program I was freelancing as a{" "}
+              <Link
+                className={classes.links}
+                href="https://hoangdinh90.wixsite.com/hoangdinhphotography"
+                target="blank"
+              >
+                Photographer
+              </Link>{" "}
+              and running a{" "}
+              <Link
+                className={classes.links}
+                href="https://www.instagram.com/pasteisdevancouver/?igshid=1fxpbu1zhd7hc"
+                target="blank"
+              >
+                bakery
+              </Link>{" "}
+              off instagram. I have a driven curiosity that keeps me constantly
+              learning, to provide amazing products and services with every
+              project.
             </Typography>
           </Reveal>
           <Reveal up>
             <Typography className={classes.te}>
               Here are a few Technologies I've been working with:
             </Typography>
-            <Grid container>
+            <Grid container spacing={12}>
               {currentTech.map((tech, i) => (
-                <Typography key={i}>-{tech}</Typography>
+                <Grid item xs={4} key={i}>
+                  <Typography className={classes.te}>- {tech}</Typography>
+                </Grid>
               ))}
             </Grid>
           </Reveal>
