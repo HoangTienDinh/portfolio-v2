@@ -37,53 +37,53 @@ const About = () => {
   const classes = useStyles();
 
   return (
-      <Box id="about" name="about" className={classes.root}>
+    <Box id="about" name="about" className={classes.root}>
+      <Grid
+        className={classes.grid}
+        container
+        justify="space-evenly"
+        alignItems="center"
+      >
+        <Reveal left>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <CardMedia
+              className={classes.media}
+              image={profilePicture}
+              title="Profile Picture"
+            />
+          </Grid>
+        </Reveal>
+
         <Grid
-          className={classes.grid}
           container
-          justify="space-evenly"
-          alignItems="center"
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          justify="space-between"
         >
-          <Reveal left>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <CardMedia
-                className={classes.media}
-                image={profilePicture}
-                title="Profile Picture"
-              />
+          <Reveal right>
+            <Typography className={classes.headline} variant="h3">
+              {headline}
+            </Typography>
+            <Typography className={classes.description}>
+              {description}
+            </Typography>
+          </Reveal>
+          <Reveal up>
+            <Typography className={classes.te}>
+              Here are a few Technologies I've been working with:
+            </Typography>
+            <Grid container>
+              {currentTech.map((tech, i) => (
+                <Typography key={i}>-{tech}</Typography>
+              ))}
             </Grid>
           </Reveal>
-
-          <Grid
-            container
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            lg={3}
-            justify="space-between"
-          >
-            <Reveal right>
-              <Typography className={classes.headline} variant="h3">
-                {headline}
-              </Typography>
-              <Typography className={classes.description}>
-                {description}
-              </Typography>
-            </Reveal>
-            <Reveal up>
-              <Typography className={classes.te}>
-                Here are a few Technologies I've been working with:
-              </Typography>
-              <Grid container>
-                {currentTech.map((tech, i) => (
-                  <Typography key={i}>-{tech}</Typography>
-                ))}
-              </Grid>
-            </Reveal>
-          </Grid>
         </Grid>
-      </Box>
+      </Grid>
+    </Box>
   );
 };
 
