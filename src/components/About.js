@@ -112,7 +112,7 @@ const About = () => {
             <Grid container spacing={12}>
               {aboutMe.currentTech.map((tech, i) => (
                 <Grid item xs={4} key={i}>
-                  <Typography className={classes.te}>- {tech}</Typography>
+                  <Typography className={classes.te}>▹ {tech}</Typography>
                 </Grid>
               ))}
             </Grid>
