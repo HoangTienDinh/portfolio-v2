@@ -69,6 +69,16 @@ const useStyles = makeStyles((theme) => ({
       color: "#FF9900",
     },
   },
+  headlineLeft: {
+    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(1),
+    color: "#FF9900",
+  },
+  headlineRight: {
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
+    color: "#FF9900",
+  },
   descriptionLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
@@ -152,6 +162,7 @@ const FeaturedProjects = () => {
     let techWrapper;
     let styledTech;
     let title;
+    let headline;
     let description;
     let linkWrapper;
     let styledLink;
@@ -163,6 +174,7 @@ const FeaturedProjects = () => {
       techWrapper = classes.techWrapperRight;
       styledTech = classes.styledTechRight;
       title = classes.titleRight;
+      headline = classes.headlineRight;
       description = classes.descriptionRight;
       linkWrapper = classes.linkWrapperRight;
       styledLink = classes.styledLinkRight;
@@ -173,6 +185,7 @@ const FeaturedProjects = () => {
       techWrapper = classes.techWrapperLeft;
       styledTech = classes.styledTechLeft;
       title = classes.titleLeft;
+      headline = classes.headlineLeft;
       description = classes.descriptionLeft;
       linkWrapper = classes.linkWrapperLeft;
       styledLink = classes.styledLinkLeft;
@@ -199,10 +212,13 @@ const FeaturedProjects = () => {
               href={project.website ? project.website : project.github}
               target="_blank"
             >
-              <Typography className={title} variant="h5">
+              <Typography className={title} variant="h4">
                 {project.title}
               </Typography>
             </Link>
+            <Typography className={headline} variant="h6">
+              {project.headline}
+            </Typography>
             <Typography className={description}>
               {project.description}
             </Typography>
@@ -242,10 +258,13 @@ const FeaturedProjects = () => {
               href={project.website ? project.website : project.github}
               target="_blank"
             >
-              <Typography className={title} variant="h5">
+              <Typography className={title} variant="h4">
                 {project.title}
               </Typography>
             </Link>
+            <Typography className={headline} variant="h6">
+              {project.headline}
+            </Typography>
             <Typography className={description}>
               {project.description}
             </Typography>
