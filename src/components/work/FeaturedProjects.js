@@ -192,6 +192,7 @@ const FeaturedProjects = () => {
       mobileContentContainer = classes.mobileContentLeft;
     }
 
+    // try using grid system in your project
     return (
       <Grid container key={index} className={classes.projectContainer}>
         <Hidden only={["xs", "sm"]}>
