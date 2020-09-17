@@ -185,13 +185,22 @@ const Header = (props) => {
                           id="menu-list-grow"
                           onKeyDown={handleListKeyDown}
                         >
-                          <Link href="#about">
+                          <Link
+                            href="#about"
+                            onClick={() => handleScroll("about")}
+                          >
                             <MenuItem onClick={handleClose}>About</MenuItem>
                           </Link>
-                          <Link href="#work">
+                          <Link
+                            href="#work"
+                            onClick={() => handleScroll("work")}
+                          >
                             <MenuItem onClick={handleClose}>Work</MenuItem>
                           </Link>
-                          <Link href="#contact">
+                          <Link
+                            href="#contact"
+                            onClick={() => handleScroll("contact")}
+                          >
                             <MenuItem onClick={handleClose}>Contact</MenuItem>
                           </Link>
                           <Link href={Resume} target="blank">
