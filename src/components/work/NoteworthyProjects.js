@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
     width: "100%",
-    marginTop: "10%",
-    marginBottom: "10%",
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
   },
   noteworthy: {
     color: "#cccccc",
@@ -28,7 +28,11 @@ const useStyles = makeStyles((theme) => ({
   },
   project: {
     border: "solid 1px black",
-    padding: "5%",
+    transition: "transform .3s ease-out",
+    "&:hover": {
+      transform: "translate(0, -15px)",
+      boxShadow: "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)",
+    },
   },
   title: {
     color: "#E6E6CC",
@@ -55,69 +59,69 @@ const NoteworthyProjects = () => {
     <Container className={classes.root}>
       <Reveal duration={2000} effect="fadeInUp">
         <Typography variant="h3" className={classes.noteworthy}>
-          Noteworthy Projects
+          Other Noteworthy Projects
         </Typography>
       </Reveal>
 
-      <Grid container justify="center" spacing={4}>
+      <Grid container justify="center" spacing={6}>
         {noteworthyProj.map((project, i) => (
-            <Grid
-              container
-              item
-              key={i}
-              xs={12}
-              sm={8}
-              md={8}
-              lg={4}
-              direction="column"
-              className={classes.project}
-            >
-              <Reveal duration={i * 500} effect="fadeInUp">
-                <Grid container item justify="space-between">
-                  <FolderIcon />
-                  <Grid item>
-                    {project.github && (
-                      <Link
-                        className={classes.links}
-                        href={project.github}
-                        target="blank"
-                      >
-                        <GitHubIcon />
-                      </Link>
-                    )}
-                    {project.website && (
-                      <Link
-                        className={classes.links}
-                        href={project.website}
-                        target="blank"
-                      >
-                        <OpenInNewIcon />
-                      </Link>
-                    )}
+          <Grid
+            container
+            item
+            key={i}
+            xs={12}
+            sm={8}
+            md={8}
+            lg={4}
+            direction="column"
+            className={classes.project}
+          >
+            <Reveal duration={i * 500} effect="fadeInUp">
+              <Grid container item justify="space-between">
+                <FolderIcon />
+                <Grid item>
+                  {project.github && (
+                    <Link
+                      className={classes.links}
+                      href={project.github}
+                      target="blank"
+                    >
+                      <GitHubIcon />
+                    </Link>
+                  )}
+                  {project.website && (
+                    <Link
+                      className={classes.links}
+                      href={project.website}
+                      target="blank"
+                    >
+                      <OpenInNewIcon />
+                    </Link>
+                  )}
+                </Grid>
+              </Grid>
+
+              <Grid item>
+                <Typography className={classes.title} variant="h6">
+                  {project.title}
+                </Typography>
+              </Grid>
+
+              <Grid item>
+                <Typography className={classes.description}>
+                  {project.description}
+                </Typography>
+              </Grid>
+
+              <Grid container>
+                {project.technology.map((tech, i) => (
+                  <Grid item key={i} className={classes.technology}>
+                    <Typography>{tech}</Typography>
                   </Grid>
-                </Grid>
-
-                <Grid item>
-                  <Typography className={classes.title} variant="h6">
-                    {project.title}
-                  </Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography className={classes.description}>
-                    {project.description}
-                  </Typography>
-                </Grid>
-
-                <Grid container>
-                  {project.technology.map((tech, i) => (
-                    <Grid item key={i} className={classes.technology}>
-                      <Typography>{tech}</Typography>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Reveal>
-            </Grid>
+                ))}
+              </Grid>
+            </Reveal>
+          </Grid>
         ))}
       </Grid>
     </Container>
