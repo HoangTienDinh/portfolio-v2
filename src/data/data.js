@@ -24,7 +24,7 @@ const portfolio = {
     },
     {
       title: "Portfolio Site",
-      headline: "A website built to be used by any user.",
+      headline: "A website built as a template for any user.",
       description:
         "This project is built with the concept of being designed as a template for other creators to showcase their work. Coded to be modular and easy to plug in one's own portfolio information.",
       image: picture,
