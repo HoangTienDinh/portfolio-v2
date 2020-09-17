@@ -87,11 +87,13 @@ const useStyles = makeStyles((theme) => ({
   },
   techWrapperLeft: {
     display: "flex",
+    flexWrap: "wrap",
     marginBottom: theme.spacing(1),
     color: "#8BADC1",
   },
   techWrapperRight: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "flex-end",
     marginBottom: theme.spacing(1),
     color: "#8BADC1",
@@ -204,7 +206,7 @@ const FeaturedProjects = () => {
             <Typography className={description}>
               {project.description}
             </Typography>
-            <Grid item className={techWrapper}>
+            <Grid className={techWrapper} item>
               {project.technology.map((tech, i) => (
                 <Typography key={i} className={styledTech}>
                   {tech}
