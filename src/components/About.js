@@ -3,9 +3,11 @@ import { Box, Typography, CardMedia, Grid, Link } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
-import data from "../data/data";
 
-const { headline, currentTech } = data.portfolio.aboutMe;
+const aboutMe = {
+  headline: "A Little Bit About Me",
+  currentTech: ["React", "MUI", "Firebase", "Javascript", "Python", "Node"],
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,7 +70,7 @@ const About = () => {
         >
           <Reveal right>
             <Typography className={classes.headline} variant="h3">
-              {headline}
+              {aboutMe.headline}
             </Typography>
             <Typography className={classes.description}>
               A little about me, I'm a Full-Stack Web Developer, that enjoys
@@ -108,7 +110,7 @@ const About = () => {
               Here are a few Technologies I've been working with:
             </Typography>
             <Grid container spacing={12}>
-              {currentTech.map((tech, i) => (
+              {aboutMe.currentTech.map((tech, i) => (
                 <Grid item xs={4} key={i}>
                   <Typography className={classes.te}>- {tech}</Typography>
                 </Grid>
