@@ -37,7 +37,7 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Box id="about" name="about" className={classes.root}>
+    <Box id="about" className={classes.root}>
       <Grid
         className={classes.grid}
         container
