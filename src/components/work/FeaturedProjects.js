@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "1",
   },
   imageLeft: {
-    gridColumn: "1 / 8",
+    gridColumn: "1 / 9",
     boxShadow: "0 10px 30px -15px black",
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
