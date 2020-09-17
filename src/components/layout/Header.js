@@ -19,14 +19,7 @@ import {
   Grow,
   useScrollTrigger,
 } from "@material-ui/core";
-import {
-  Link as linkScroll,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { scroller } from "react-scroll";
 
 import Resume from "../../assets/Hoang Dinh Resume.pdf";
 
@@ -83,12 +76,12 @@ const Header = (props) => {
   const anchorRef = useRef(null);
   const classes = useStyles();
 
+  // scroll-react effect to have smooth scrolling transitions
   const handleScroll = (event) => {
     scroller.scrollTo(event, {
       duration: 1500,
-      delay: 100,
+      delay: 50,
       smooth: true,
-      offset: 50,
     });
   };
 
