@@ -5,6 +5,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import Reveal from "react-reveal/Reveal";
 import data from "../data/data";
 
+import {
+  Link as linkScroll,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
+
 const { headline, description, currentTech } = data.portfolio.aboutMe;
 
 const useStyles = makeStyles((theme) => ({
@@ -37,53 +46,55 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Box id="about" className={classes.root}>
-      <Grid
-        className={classes.grid}
-        container
-        justify="space-evenly"
-        alignItems="center"
-      >
-        <Reveal left>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <CardMedia
-              className={classes.media}
-              image={profilePicture}
-              title="Profile Picture"
-            />
-          </Grid>
-        </Reveal>
-
+    <Element name='about'>
+      <Box id="about" name="about" className={classes.root}>
         <Grid
+          className={classes.grid}
           container
-          item
-          xs={12}
-          sm={6}
-          md={4}
-          lg={3}
-          justify="space-between"
+          justify="space-evenly"
+          alignItems="center"
         >
-          <Reveal right>
-            <Typography className={classes.headline} variant="h3">
-              {headline}
-            </Typography>
-            <Typography className={classes.description}>
-              {description}
-            </Typography>
-          </Reveal>
-          <Reveal up>
-            <Typography className={classes.te}>
-              Here are a few Technologies I've been working with:
-            </Typography>
-            <Grid container>
-              {currentTech.map((tech, i) => (
-                <Typography key={i}>-{tech}</Typography>
-              ))}
+          <Reveal left>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <CardMedia
+                className={classes.media}
+                image={profilePicture}
+                title="Profile Picture"
+              />
             </Grid>
           </Reveal>
+
+          <Grid
+            container
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            justify="space-between"
+          >
+            <Reveal right>
+              <Typography className={classes.headline} variant="h3">
+                {headline}
+              </Typography>
+              <Typography className={classes.description}>
+                {description}
+              </Typography>
+            </Reveal>
+            <Reveal up>
+              <Typography className={classes.te}>
+                Here are a few Technologies I've been working with:
+              </Typography>
+              <Grid container>
+                {currentTech.map((tech, i) => (
+                  <Typography key={i}>-{tech}</Typography>
+                ))}
+              </Grid>
+            </Reveal>
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </Element>
   );
 };
 

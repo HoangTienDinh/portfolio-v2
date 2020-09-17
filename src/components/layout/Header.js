@@ -19,6 +19,14 @@ import {
   Grow,
   useScrollTrigger,
 } from "@material-ui/core";
+import {
+  Link as linkScroll,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 import Resume from "../../assets/Hoang Dinh Resume.pdf";
 
@@ -72,8 +80,18 @@ function HideOnScroll({ children, window }) {
 
 const Header = (props) => {
   const [open, setOpen] = useState(false);
+  const [scrollID, setScrollID] = useState("");
   const anchorRef = useRef(null);
   const classes = useStyles();
+
+  const handleScroll = () => {
+    scroller.scrollTo("MuiBox-root-24", {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50,
+    });
+  };
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -113,7 +131,7 @@ const Header = (props) => {
             <Typography variant="h6">Hoang Dinh</Typography>
             <Hidden only={["xs"]}>
               <Toolbar className={classes.navigation}>
-                <Link className={classes.links} href="#about">
+                <Link className={classes.links} onClick={handleScroll}>
                   <Button className={classes.button}>About</Button>
                 </Link>
 
