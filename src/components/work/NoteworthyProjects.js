@@ -27,11 +27,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(5),
   },
   project: {
+    margin: theme.spacing(2),
     border: "solid 1px black",
     transition: "transform .3s ease-out",
     "&:hover": {
       transform: "translate(0, -15px)",
       boxShadow: "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)",
+    },
+    "@media (min-width: 1600px)": {
+      maxWidth: "30%",
     },
   },
   title: {
@@ -63,7 +67,7 @@ const NoteworthyProjects = () => {
         </Typography>
       </Reveal>
 
-      <Grid container justify="center" spacing={6}>
+      <Grid container justify="center" spacing={8}>
         {noteworthyProj.map((project, i) => (
           <Grid
             container
