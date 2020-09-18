@@ -73,7 +73,7 @@ const NoteworthyProjects = () => {
             container
             item
             key={i}
-            xs={12}
+            xs={10}
             sm={8}
             md={8}
             lg={4}
