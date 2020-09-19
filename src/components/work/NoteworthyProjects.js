@@ -38,16 +38,21 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "30%",
     },
   },
+  header: {
+    paddingBottom: theme.spacing(1),
+  },
   title: {
     color: "#E6E6CC",
+    paddingBottom: theme.spacing(1),
   },
   description: {
     color: "#6699CC",
+    paddingBottom: theme.spacing(1),
   },
   technology: {
-    marginRight: theme.spacing(2),
+    paddingRight: theme.spacing(2),
     color: "#4060bf",
-    fontStyle: "italic"
+    fontStyle: "italic",
   },
   links: {
     margin: theme.spacing(0.5),
@@ -82,7 +87,11 @@ const NoteworthyProjects = () => {
             className={classes.project}
           >
             <Reveal duration={i * 500} effect="fadeInUp">
-              <Grid container justify="space-between">
+              <Grid
+                container
+                className={classes.header}
+                justify="space-between"
+              >
                 <FolderIcon />
                 <Grid item>
                   {project.github && (
@@ -107,7 +116,7 @@ const NoteworthyProjects = () => {
               </Grid>
 
               <Grid item>
-                <Typography className={classes.title} variant="h6">
+                <Typography className={classes.title} variant="h5">
                   {project.title}
                 </Typography>
               </Grid>
