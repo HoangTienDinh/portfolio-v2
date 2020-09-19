@@ -35,13 +35,13 @@ const portfolio = {
   ],
   noteworthyProj: [
     {
-      title: "Proj One",
+      title: "Scheduler",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum luctus orci a varius. Nunc scelerisque urna velit, non luctus purus bibendum aliquet.",
+        "Scheduling app to setup appointments between interviewers with interviewees, throughout the calendar week. Giving users a nice interface to interact with.",
       image: "",
-      technology: ["React", "Ruby", "HTML", "Ruby on Rails"],
-      github: "www.github.com",
-      website: "www.hoangtiendinh.com",
+      technology: ["React", "Axios", "Storybook", "Cypress", "Babel"],
+      github: "https://github.com/HoangTienDinh/scheduler",
+      website: "",
     },
     {
       title: "Proj Two",
