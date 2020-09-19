@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#6699CC",
   },
   technology: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
     color: "#4060bf",
     fontStyle: "italic"
   },
