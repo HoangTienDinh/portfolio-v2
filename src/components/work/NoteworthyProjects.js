@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   technology: {
     marginRight: theme.spacing(1),
     color: "#4060bf",
+    fontStyle: "italic"
   },
   links: {
     margin: theme.spacing(0.5),
@@ -67,7 +68,7 @@ const NoteworthyProjects = () => {
         </Typography>
       </Reveal>
 
-      <Grid container justify="center" spacing={8}>
+      <Grid container justify="center" spacing={6}>
         {noteworthyProj.map((project, i) => (
           <Grid
             container
@@ -81,7 +82,7 @@ const NoteworthyProjects = () => {
             className={classes.project}
           >
             <Reveal duration={i * 500} effect="fadeInUp">
-              <Grid container item justify="space-between">
+              <Grid container justify="space-between">
                 <FolderIcon />
                 <Grid item>
                   {project.github && (
