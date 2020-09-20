@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
   titleLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
+    paddingRight: "35%",
     "&:hover": {
       color: "#FF9900",
     },
@@ -65,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
   titleRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
+    paddingLeft: "35%",
     "&:hover": {
       color: "#FF9900",
     },
@@ -72,11 +74,13 @@ const useStyles = makeStyles((theme) => ({
   headlineLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
+    paddingRight: "35%",
     color: "#FF9900",
   },
   headlineRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
+    paddingLeft: "35",
     color: "#FF9900",
   },
   descriptionLeft: {
@@ -98,7 +102,8 @@ const useStyles = makeStyles((theme) => ({
   techWrapperLeft: {
     display: "flex",
     flexWrap: "wrap",
-    marginBottom: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+    paddingRight: "35%",
     color: "#8BADC1",
   },
   techWrapperRight: {
@@ -106,15 +111,18 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "flex-end",
     marginBottom: theme.spacing(1),
+    paddingLeft: "35%",
     color: "#8BADC1",
   },
   styledTechLeft: {
     marginLeft: theme.spacing(1),
+    marginBottom: theme.spacing(1),
     padding: theme.spacing(1),
     border: "2px solid black",
   },
   styledTechRight: {
     marginRight: theme.spacing(1),
+    marginBottom: theme.spacing(1),
     padding: theme.spacing(1),
     border: "2px solid black",
   },
