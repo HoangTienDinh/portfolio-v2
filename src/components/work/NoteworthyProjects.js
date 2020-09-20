@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       transform: "translate(0, -15px)",
       boxShadow: "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)",
     },
-    "@media (min-width: 1600px)": {
+    "@media (min-width: 1280px)": {
       maxWidth: "30%",
     },
   },
@@ -81,9 +81,8 @@ const NoteworthyProjects = () => {
             item
             key={i}
             xs={10}
-            sm={8}
-            md={8}
-            lg={4}
+            sm={6}
+            md={4}
             direction="column"
             className={classes.project}
           >
