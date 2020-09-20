@@ -1,3 +1,15 @@
+<h1 align="center">
+  hoangtiendinh.com - V2
+</h1>
+<p align="center">
+  The second iteration of <a href="https://www.hoangtiendinh.com/" target="_blank">hoangtiendinh.com</a> built with <a href="https://reactjs.org/" target="_blank">React</a>
+</p>
+<p align="center">
+  Previous iteration:
+  <a href="https://github.com/HoangTienDinh/hoangtiendinh.github.io" target="_blank">v1</a>,
+ 
+</p>
+
 ## Project Goal
 To make a modular SPA to be used as a template for other devs wishing to build a portfolio.
 
