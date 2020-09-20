@@ -32,7 +32,6 @@ const Social = () => {
   const classes = useStyles();
 
   return (
-    // <div className={classes.root}>
     <Grid
       container
       className={classes.root}
@@ -68,7 +67,6 @@ const Social = () => {
         <EmailIcon />
       </Link>
     </Grid>
-    // </div>
   );
 };
 
