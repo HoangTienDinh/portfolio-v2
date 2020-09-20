@@ -83,6 +83,12 @@ const portfolio = {
       website: "",
     },
   ],
+  social: {
+    github: "https://github.com/HoangTienDinh",
+    linkedIn: "https://www.linkedin.com/in/hoangdinh90/",
+    instagram: "https://www.instagram.com/hohohoang/",
+    email: "mailto:hoangdinh90@gmail.com",
+  }
 };
 
 export default { portfolio };

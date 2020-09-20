@@ -6,6 +6,10 @@ import EmailIcon from "@material-ui/icons/Email";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Link } from "@material-ui/core";
 
+import data from "../../data/data";
+
+const { social } = data.portfolio;
+
 const useStyles = makeStyles((theme) => ({
   root: {
     bottom: 0,
@@ -40,28 +44,28 @@ const Social = () => {
     >
       <Link
         className={classes.links}
-        href="https://github.com/HoangTienDinh"
+        href={social.github}
         target="_blank"
       >
         <GitHubIcon />
       </Link>
       <Link
         className={classes.links}
-        href="https://www.linkedin.com/in/hoangdinh90/"
+        href={social.linkedIn}
         target="_blank"
       >
         <LinkedInIcon />
       </Link>
       <Link
         className={classes.links}
-        href="https://www.instagram.com/hohohoang/"
+        href={social.instagram}
         target="_blank"
       >
         <InstagramIcon />
       </Link>
       <Link
         className={classes.links}
-        href="mailto:hoangdinh90@gmail.com"
+        href={social.email}
         target="_blank"
       >
         <EmailIcon />
