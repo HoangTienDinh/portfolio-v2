@@ -85,9 +85,10 @@ const Footer = () => {
       <Grid item>
         <Link
           href="https://github.com/HoangTienDinh/portfolio-v2"
-          target="blank"
+          target="_blank"
+          className={classes.footer}
         >
-          <Typography className={classes.footer}>
+          <Typography>
             Designed & built by Hoang Dinh
           </Typography>
         </Link>

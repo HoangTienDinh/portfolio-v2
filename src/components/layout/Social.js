@@ -12,6 +12,7 @@ const { social } = data.portfolio;
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: "40px",
     bottom: 0,
     right: theme.spacing(3),
     position: "fixed",
