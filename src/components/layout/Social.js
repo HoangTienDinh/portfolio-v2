@@ -3,14 +3,11 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
-import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-end",
     bottom: 0,
     right: theme.spacing(3),
     position: "fixed",
@@ -35,7 +32,13 @@ const Social = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    // <div className={classes.root}>
+    <Grid
+      container
+      className={classes.root}
+      direction="column"
+      alignItems="flex-end"
+    >
       <Link
         className={classes.links}
         href="https://github.com/HoangTienDinh"
@@ -64,7 +67,8 @@ const Social = () => {
       >
         <EmailIcon />
       </Link>
-    </div>
+    </Grid>
+    // </div>
   );
 };
 
