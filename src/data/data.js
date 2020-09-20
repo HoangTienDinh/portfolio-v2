@@ -30,7 +30,7 @@ const portfolio = {
       image: picture,
       technology: ["Javascript", "React", "react-reveal"],
       github: "https://www.github.com",
-      website: "",
+      website: "https://www.hoangtiendinh.com/",
     },
   ],
   noteworthyProj: [
