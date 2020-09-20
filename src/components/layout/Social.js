@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "10",
   },
   links: {
-    height: theme.spacing(4),
+    height: "40px",
     maxWidth: "fit-content",
-    margin: theme.spacing(0.5),
+    marginRight: theme.spacing(0.5),
+    marginBottom: theme.spacing(2),
     top: 0,
     transition: "top ease 0.5s",
     position: "relative",
