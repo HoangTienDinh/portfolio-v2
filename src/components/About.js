@@ -6,7 +6,7 @@ import Reveal from "react-reveal/Reveal";
 
 const aboutMe = {
   headline: "A Little Bit About Me",
-  currentTech: ["React", "MUI", "Firebase", "Javascript", "Python", "Node"],
+  currentTech: ["React", "MUI", "Firebase", "Javascript", "Java", "Node"],
 };
 
 const useStyles = makeStyles((theme) => ({

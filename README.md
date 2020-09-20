@@ -1,6 +1,13 @@
 ## Project Goal
 To make a modular SPA to be used as a template for other devs wishing to build a portfolio.
 
+## Installation & Setup
+- Fork this project repo to your Github
+- Clone your forked repo
+- Install the dependencies with `npm install`
+- Start the development server with `npm start`
+- To change project details, go into `/src/data/data.js` with your data
+
 ## 🎨 Color Reference
 
 | Color          | Hex                                                                |
