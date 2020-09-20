@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   media: {
-    height: 200,
-    width: 200,
+    height: 300,
+    width: 300,
   },
   grid: {
     height: "inherit",
@@ -57,8 +57,8 @@ const About = () => {
           <Grid
             className={classes.mediaContainer}
             item
-            xs={12}
-            sm={6}
+            xs={10}
+            sm={10}
             md={4}
             lg={3}
           >
@@ -74,10 +74,11 @@ const About = () => {
           container
           item
           xs={10}
-          sm={6}
+          sm={10}
           md={4}
           lg={3}
           justify="space-between"
+          direction="column"
         >
           <Reveal right>
             <Typography className={classes.headline} variant="h3">
@@ -122,7 +123,7 @@ const About = () => {
             </Typography>
             <Grid container>
               {aboutMe.currentTech.map((tech, i) => (
-                <Grid item xs={4} key={i}>
+                <Grid item xs={4} sm={3} md={4}key={i}>
                   <Typography className={classes.te}>▹ {tech}</Typography>
                 </Grid>
               ))}
