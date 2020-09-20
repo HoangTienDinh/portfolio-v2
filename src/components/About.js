@@ -123,7 +123,7 @@ const About = () => {
             </Typography>
             <Grid container>
               {aboutMe.currentTech.map((tech, i) => (
-                <Grid item xs={4} sm={3} md={4}key={i}>
+                <Grid item xs={4} sm={3} md={4} key={i}>
                   <Typography className={classes.te}>▹ {tech}</Typography>
                 </Grid>
               ))}
