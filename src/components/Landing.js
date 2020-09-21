@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { Box } from "@material-ui/core";
 import Typist from "react-typist";
+import { useTransition, animated, config } from "react-spring";
 
-import Image from "../assets/newWest.jpg";
 import imageOne from "../assets/imageOne.jpg";
 import imageTwo from "../assets/imageTwo.jpg";
 import imageThree from "../assets/imageThree.jpg";
+
+const slides = [
+  { id: 0, image: imageOne },
+  { id: 1, image: imageTwo },
+  { id: 2, image: imageThree },
+];
 
 const useStyles = makeStyles((theme) => ({
   root: {
