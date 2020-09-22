@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: "inherit",
   },
   media: {
-    height: "100vh",
+    height: "calc(100vh - 56px)",
   },
   headline: {
     position: "absolute",
@@ -42,7 +42,7 @@ const Landing = () => {
 
   return (
     <Box className={classes.root}>
-      <CardMedia className={classes.media} image={Image} title="Landing Page">
+      <CardMedia className={classes.media} image={imageOne} title="Landing Page">
         <Typist>
           <Typography className={classes.name} variant="h3">
             Hoang Dinh
