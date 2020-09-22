@@ -11,7 +11,7 @@ const aboutMe = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "100vh",
+    height: "inherit",
     width: "inherit",
   },
   mediaContainer: {
