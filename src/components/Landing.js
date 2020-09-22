@@ -6,9 +6,9 @@ import { Box } from "@material-ui/core";
 import Typist from "react-typist";
 import { useTransition, animated, config } from "react-spring";
 
-import imageOne from "../assets/imageOne.jpg";
-import imageTwo from "../assets/imageTwo.jpg";
-import imageThree from "../assets/imageThree.jpg";
+import imageOne from "../assets/flatlay1.jpg";
+import imageTwo from "../assets/flatlay2.jpg";
+import imageThree from "../assets/flatlay3.jpg";
 
 const slides = [
   { id: 0, image: imageOne },
