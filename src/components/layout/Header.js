@@ -54,11 +54,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
-  paper: {
-    marginRight: theme.spacing(2),
-  },
   menuButton: {
-    right: theme.spacing(2),
+    paddingRight: theme.spacing(2),
   }
 }));
 

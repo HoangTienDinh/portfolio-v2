@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     position: "absolute",
-    top: "45%",
+    height: "15%",
+    top: "43%",
     textAlign: "center",
   },
 }));
@@ -52,7 +53,12 @@ const Landing = () => {
         image={imageOne}
         title="Landing Page"
       >
-        <Grid container className={classes.text} direction="column" spacing={5}>
+        <Grid
+          container
+          className={classes.text}
+          justify="space-between"
+          direction="row"
+        >
           <Grid item xs={12}>
             <Typography variant="h3">Hoang Dinh</Typography>
           </Grid>
