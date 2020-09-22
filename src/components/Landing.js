@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Box } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import Typist from "react-typist";
 import { useTransition, animated, config } from "react-spring";
 
@@ -35,6 +35,11 @@ const useStyles = makeStyles((theme) => ({
     top: "40%",
     left: "5%",
   },
+  text: {
+    position: "absolute",
+    top: "45%",
+    textAlign: "center",
+  },
 }));
 
 const Landing = () => {
@@ -42,20 +47,19 @@ const Landing = () => {
 
   return (
     <Box className={classes.root}>
-      <CardMedia className={classes.media} image={imageOne} title="Landing Page">
-        <Typist>
-          <Typography className={classes.name} variant="h3">
-            Hoang Dinh
-          </Typography>
-          <Typist.Delay ms={200} />
-          <Typography className={classes.headline} variant="h3">
-            Photographer
-          </Typography>
-          <Typist.Backspace count={12} delay={200} />
-          <Typography className={classes.headline} variant="h3">
-            Web Developer
-          </Typography>
-        </Typist>
+      <CardMedia
+        className={classes.media}
+        image={imageOne}
+        title="Landing Page"
+      >
+        <Grid container className={classes.text} direction="column" spacing={5}>
+          <Grid item xs={12}>
+            <Typography variant="h3">Hoang Dinh</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h3">Web Developer</Typography>
+          </Grid>
+        </Grid>
       </CardMedia>
     </Box>
   );

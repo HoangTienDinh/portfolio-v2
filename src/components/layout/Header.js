@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     marginRight: theme.spacing(2),
   },
+  menuButton: {
+    right: theme.spacing(2),
+  }
 }));
 
 function HideOnScroll({ children, window }) {
