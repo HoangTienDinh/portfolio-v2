@@ -3,7 +3,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { Box, Grid } from "@material-ui/core";
-import Typist from "react-typist";
 import { useTransition, animated, config } from "react-spring";
 
 import imageOne from "../assets/flatlay1.jpg";
