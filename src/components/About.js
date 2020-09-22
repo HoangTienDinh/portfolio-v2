@@ -11,8 +11,11 @@ const aboutMe = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "inherit",
+    height: "100vh",
     width: "inherit",
+    "@media (max-width: 600px)": {
+      height: "inherit",
+    },
   },
   mediaContainer: {
     paddingTop: theme.spacing(4),

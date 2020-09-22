@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   headlineRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
-    paddingLeft: "35",
+    paddingLeft: "35%",
     color: "#FF9900",
   },
   descriptionLeft: {
