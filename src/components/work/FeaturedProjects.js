@@ -105,6 +105,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(1),
     paddingRight: "35%",
     color: "#8BADC1",
+    "@media (max-width: 600px)": {
+      paddingRight: 0,
+    },
   },
   techWrapperRight: {
     display: "flex",
@@ -113,6 +116,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(1),
     paddingLeft: "35%",
     color: "#8BADC1",
+    "@media (max-width: 600px)": {
+      paddingLeft: 0,
+    },
   },
   styledTechLeft: {
     marginLeft: theme.spacing(1),
