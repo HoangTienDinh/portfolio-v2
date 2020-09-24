@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { Box, Grid } from "@material-ui/core";
-import { useTransition, animated, config } from "react-spring";
+import Slider from "react-slick";
 
 import imageOne from "../assets/flatlay1.jpg";
-import imageTwo from "../assets/flatlay2.jpg";
-import imageThree from "../assets/flatlay3.jpg";
+import imageTwo from "../assets/flatlay3.jpg";
+import imageThree from "../assets/flatlay2.jpg";
 
 const slides = [
   { id: 0, image: imageOne },
@@ -19,8 +19,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "inherit",
   },
+  mediaContainer: {
+  },
   media: {
     height: "calc(100vh - 56px)",
+    objectFit: "contain",
   },
   headline: {
     position: "absolute",
@@ -34,38 +37,66 @@ const useStyles = makeStyles((theme) => ({
     top: "40%",
     left: "5%",
   },
-  text: {
+  textBox: {
     position: "absolute",
     height: "15%",
     top: "43%",
     textAlign: "center",
   },
+  text: {
+    color: "#FF9900",
+  }
 }));
 
 const Landing = () => {
   const classes = useStyles();
 
+  const settings = {
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    variableWidth: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+  };
+
   return (
     <Box className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={imageOne}
-        title="Landing Page"
+      <Grid item className={classes.mediaContainer}>
+        <Slider {...settings}>
+          <CardMedia
+            className={classes.media}
+            image={imageOne}
+          />
+          <CardMedia
+            className={classes.media}
+            image={imageTwo}
+          />
+          <CardMedia
+            className={classes.media}
+            image={imageThree}
+          />
+        </Slider>
+      </Grid>
+      <Grid
+        container
+        className={classes.textBox}
+        justify="space-between"
+        direction="row"
       >
-        <Grid
-          container
-          className={classes.text}
-          justify="space-between"
-          direction="row"
-        >
-          <Grid item xs={12}>
-            <Typography variant="h3">Hoang Dinh</Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h3">Web Developer</Typography>
-          </Grid>
+        <Grid item xs={12}>
+          <Typography className={classes.text} variant="h3">Hoang Dinh</Typography>
         </Grid>
-      </CardMedia>
+        <Grid item xs={12}>
+          <Typography className={classes.text} variant="h3">Web Developer</Typography>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
