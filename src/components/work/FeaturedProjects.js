@@ -47,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
+    filter: "opacity(0.5)",
+    "&:hover": {
+      filter: "none",
+    },
   },
   imageRight: {
     gridColumn: "5 / 13",
@@ -54,10 +58,15 @@ const useStyles = makeStyles((theme) => ({
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
+    filter: "opacity(0.5)",
+    "&:hover": {
+      filter: "none",
+    },
   },
   titleLeft: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(1),
+    color: "#E6E6CC",
     paddingRight: "35%",
     "&:hover": {
       color: "#FF9900",
@@ -66,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
   titleRight: {
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
+    color: "#E6E6CC",
     paddingLeft: "35%",
     "&:hover": {
       color: "#FF9900",
