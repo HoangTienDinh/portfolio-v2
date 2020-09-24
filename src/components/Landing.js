@@ -9,12 +9,6 @@ import imageOne from "../assets/flatlay1.jpg";
 import imageTwo from "../assets/flatlay3.jpg";
 import imageThree from "../assets/flatlay2.jpg";
 
-const slides = [
-  { id: 0, image: imageOne },
-  { id: 1, image: imageTwo },
-  { id: 2, image: imageThree },
-];
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "inherit",
