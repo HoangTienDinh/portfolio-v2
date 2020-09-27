@@ -1,6 +1,7 @@
 <h1 align="center">
   hoangtiendinh.com - V2
 </h1>
+<img src="./src/assets/flatlay1.jpg">
 <p align="center">
   The second iteration of <a href="https://www.hoangtiendinh.com/" target="_blank">hoangtiendinh.com</a> built with <a href="https://reactjs.org/" target="_blank">React</a>
 </p>
