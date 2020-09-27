@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   project: {
     margin: theme.spacing(2),
-    border: "solid 5px black",
+    border: "solid 2px black",
     borderRadius: "10px",
     transition: "transform .3s ease-out",
     "&:hover": {
