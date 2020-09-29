@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Social from "./Social";
+import SocialSideBar from "./SocialSideBar";
 import { Hidden } from "@material-ui/core";
 
 const Layout = () => {
@@ -8,7 +8,7 @@ const Layout = () => {
     <div>
       <Header />
       <Hidden only={["xs", "sm", "md"]}>
-        <Social />
+        <SocialSideBar />
       </Hidden>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, CardMedia, Grid, Link } from "@material-ui/core";
 import profilePicture from "../assets/profilePic.jpg";
 import { makeStyles } from "@material-ui/core/styles";
-import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade";
 
 const aboutMe = {
   headline: "A Little Bit About Me",
@@ -56,7 +56,7 @@ const About = () => {
         justify="space-evenly"
         alignItems="center"
       >
-        <Reveal left>
+        <Fade left>
           <Grid
             className={classes.mediaContainer}
             item
@@ -71,7 +71,7 @@ const About = () => {
               title="Profile Picture"
             />
           </Grid>
-        </Reveal>
+        </Fade>
 
         <Grid
           container
@@ -83,7 +83,7 @@ const About = () => {
           justify="space-between"
           direction="column"
         >
-          <Reveal right>
+          <Fade right>
             <Typography className={classes.headline} variant="h3">
               {aboutMe.headline}
             </Typography>
@@ -119,8 +119,8 @@ const About = () => {
               learning, to provide amazing products and services with every
               project.
             </Typography>
-          </Reveal>
-          <Reveal up>
+          </Fade>
+          <Fade up>
             <Typography className={classes.te}>
               Here are a few Technologies I've been working with:
             </Typography>
@@ -131,7 +131,7 @@ const About = () => {
                 </Grid>
               ))}
             </Grid>
-          </Reveal>
+          </Fade>
         </Grid>
       </Grid>
     </Box>

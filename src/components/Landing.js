@@ -58,6 +58,7 @@ const Landing = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
+    top: 0,
   };
 
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import FeaturedProjects from "./FeaturedProjects";
 import NoteworthyProjects from "./NoteworthyProjects";
 import { Container, Typography, makeStyles } from "@material-ui/core";
-import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -16,13 +16,13 @@ const Work = () => {
 
   return (
     <Container id="work">
-      <Reveal duration={2000} effect="fadeInUp">
+      <Fade bottom duration={2000}>
         <Container>
           <Typography className={classes.title} variant="h3">
             Some Things I've Built.{" "}
           </Typography>
         </Container>
-      </Reveal>
+      </Fade>
       <FeaturedProjects />
       <NoteworthyProjects />
     </Container>
