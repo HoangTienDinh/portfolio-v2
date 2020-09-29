@@ -4,7 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Link } from "@material-ui/core";
+import { Grid, Link, Typography } from "@material-ui/core";
 
 import data from "../../data/data";
 
@@ -13,6 +13,16 @@ const { social } = data.portfolio;
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    textAlign: "center",
+    width: "calc(100% - 80px)",
+  },
+  icons: {
+    fontSize: "100px",
+  },
+  text: {
+    maxWidth: "100px",
+    color: "white",
+    fontSize: "20px",
   },
 }));
 
@@ -22,25 +32,43 @@ const SocialFooter = () => {
   return (
     <Grid container className={classes.root} justify="center" spacing={10}>
       <Grid item>
-        <Link href={social.github} target="_blank">
-          <GitHubIcon />
-        </Link>
-      </Grid>
-      <Grid item>
-        <Link href={social.linkedIn} target="_blank">
-          <LinkedInIcon />
-        </Link>
-      </Grid>
-      <Grid item>
-        <Link href={social.instagram} target="_blank">
-          <InstagramIcon />
-        </Link>
+        <Typography className={classes.text}>Code</Typography>
+        <Typography className={classes.text}>With Me</Typography>
+        <Grid item>
+          <Link href={social.github} target="_blank">
+            <GitHubIcon className={classes.icons} />
+          </Link>
+        </Grid>
       </Grid>
 
       <Grid item>
-        <Link href={social.email} target="_blank">
-          <EmailIcon />
-        </Link>
+        <Typography className={classes.text}>Connect</Typography>
+        <Typography className={classes.text}>With Me</Typography>
+        <Grid item>
+          <Link href={social.linkedIn} target="_blank">
+            <LinkedInIcon className={classes.icons} />
+          </Link>
+        </Grid>
+      </Grid>
+
+      <Grid item>
+        <Typography className={classes.text}>Follow</Typography>
+        <Typography className={classes.text}>Me</Typography>
+        <Grid item>
+          <Link href={social.instagram} target="_blank">
+            <InstagramIcon className={classes.icons} />
+          </Link>
+        </Grid>
+      </Grid>
+
+      <Grid item>
+        <Typography className={classes.text}>Email</Typography>
+        <Typography className={classes.text}>Me</Typography>
+        <Grid item>
+          <Link href={social.email} target="_blank">
+            <EmailIcon className={classes.icons} />
+          </Link>
+        </Grid>
       </Grid>
     </Grid>
   );
