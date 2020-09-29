@@ -1,11 +1,7 @@
 import React from "react";
-import { Typography, Link, Hidden, Grid } from "@material-ui/core";
+import { Typography, Link, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialFooter from './SocialFooter';
-
-import data from "../../data/data";
-
-const { social } = data.portfolio;
 
 const useStyles = makeStyles((theme) => ({
   root: {
