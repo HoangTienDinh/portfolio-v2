@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageLeft: {
     gridColumn: "1 / 9",
-    boxShadow: "0 10px 30px -15px black",
+    boxShadow: "-20px 20px 40px black",
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageRight: {
     gridColumn: "5 / 13",
-    boxShadow: "0 10px 30px -15px black",
+    boxShadow: "20px 20px 40px black",
     transition: "var(--transtion)",
     gridArea: "1 / 6 / -1 / -1",
     position: "relative",
