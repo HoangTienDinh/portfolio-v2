@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
-import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade";
 import data from "../../data/data";
 
 const { featuredProj } = data.portfolio;
@@ -329,9 +329,9 @@ const FeaturedProjects = () => {
   return (
     <Container>
       {featuredProj.map((proj, ind) => (
-        <Reveal key={ind} duration={2000} effect="fadeInUp">
+        <Fade key={ind} duration={2000} bottom>
           {handleSide(proj, ind)}
-        </Reveal>
+        </Fade>
       ))}
     </Container>
   );

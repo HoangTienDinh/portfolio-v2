@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../data/data";
-import Reveal from "react-reveal";
+import Fade from "react-reveal/Fade";
 import {
   Container,
   Grid,
@@ -68,11 +68,11 @@ const NoteworthyProjects = () => {
 
   return (
     <Container className={classes.root}>
-      <Reveal duration={2000} effect="fadeInUp">
+      <Fade bottom duration={2000}>
         <Typography variant="h3" className={classes.noteworthy}>
           Other Noteworthy Projects
         </Typography>
-      </Reveal>
+      </Fade>
 
       <Grid container justify="center" spacing={6}>
         {noteworthyProj.map((project, i) => (
@@ -86,7 +86,7 @@ const NoteworthyProjects = () => {
             direction="column"
             className={classes.project}
           >
-            <Reveal duration={i * 500} effect="fadeInUp">
+            <Fade bottom duration={i * 500}>
               <Grid
                 container
                 className={classes.header}
@@ -134,7 +134,7 @@ const NoteworthyProjects = () => {
                   </Grid>
                 ))}
               </Grid>
-            </Reveal>
+            </Fade>
           </Grid>
         ))}
       </Grid>
