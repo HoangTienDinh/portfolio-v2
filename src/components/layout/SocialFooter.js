@@ -14,7 +14,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     textAlign: "center",
-    width: "calc(100% - 80px)",
+    position: "absolute",
+    bottom: theme.spacing(20),
+    // width: "calc(100% - 80px)",
   },
   icons: {
     fontSize: "100px",
@@ -30,7 +32,7 @@ const SocialFooter = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} justify="center" spacing={10}>
+    <Grid container className={classes.root} justify="center">
       <Grid item>
         <Typography className={classes.text}>Code</Typography>
         <Typography className={classes.text}>With Me</Typography>
