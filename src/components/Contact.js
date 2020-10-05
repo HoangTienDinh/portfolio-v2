@@ -12,22 +12,27 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: "100vh",
+    display: "flex",
+    "@media (max-width: 960px)": {
+      justifyContent: "center",
+    },
   },
   headline: {
     position: "absolute",
-    top: "100px",
-    left: "100px",
-    "@media (max-width: 960px)": {
-      top: "100px",
-      left: "55px",
-    },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: "6%",
   },
   text: {
     fontSize: "4rem",
     "@media (max-width: 960px)": {
-      fontSize: "1.5rem",
+      fontSize: "3rem",
     },
-  }
+    "@media (max-width: 600px)": {
+      fontSize: "2rem",
+    },
+  },
 }));
 
 const Contact = () => {
@@ -37,8 +42,12 @@ const Contact = () => {
     <Box className={classes.root} id="contact">
       <CardMedia className={classes.media} image={Image} title="Landing Page">
         <Box className={classes.headline}>
-          <Typography className={classes.text}>Let's Start Chatting Today!</Typography>
-          <Typography className={classes.text}>Use any of the links below.</Typography>
+          <Typography className={classes.text}>
+            Let's Start Chatting Today!
+          </Typography>
+          <Typography className={classes.text}>
+            Use any of the links below.
+          </Typography>
         </Box>
         <SocialFooter />
         <Footer />

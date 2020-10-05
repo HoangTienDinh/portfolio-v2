@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     position: "absolute",
     bottom: theme.spacing(20),
+    "@media (max-width: 600px)": {
+      bottom: theme.spacing(10),
+    },
   },
   icons: {
     fontSize: "10rem",
@@ -27,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     "@media (max-width: 960px)": {
       marginBottom: "2rem",
       fontSize: "5rem",
+    },
+    "@media (max-width: 600px)": {
+      fontSize: "4rem",
     },
   },
   text: {
