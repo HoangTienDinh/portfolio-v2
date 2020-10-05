@@ -25,14 +25,14 @@ const useStyles = makeStyles((theme) => ({
       color: "#FF9900",
     },
     "@media (max-width: 960px)": {
-      marginBottom: "30px",
+      marginBottom: "2rem",
       fontSize: "5rem",
     },
   },
   text: {
     color: "white",
     "@media (max-width: 960px)": {
-      fontSize: "1 rem",
+      fontSize: "1rem",
     },
   },
 }));
