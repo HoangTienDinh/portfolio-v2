@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   footer: {
+    textAlign: "center",
+    color: "#102a44",
     "&:hover": {
       color: "#FF9900",
     },
@@ -26,7 +28,7 @@ const Footer = () => {
           target="_blank"
           className={classes.footer}
         >
-          <Typography>Designed & built by Hoang Dinh</Typography>
+          <Typography variant='h6'>Designed & built by Hoang Dinh</Typography>
         </Link>
       </Grid>
     </Grid>
