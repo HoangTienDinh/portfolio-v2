@@ -16,13 +16,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     position: "absolute",
     bottom: theme.spacing(20),
+
     // width: "calc(100% - 80px)",
   },
   icons: {
     fontSize: "100px",
   },
   text: {
-    maxWidth: "100px",
+    // maxWidth: "100px",
     color: "white",
     fontSize: "20px",
   },
@@ -31,9 +32,11 @@ const useStyles = makeStyles((theme) => ({
 const SocialFooter = () => {
   const classes = useStyles();
 
+  // xs={6} sm={6} md={3} lg={3} xl={3}
+
   return (
-    <Grid container className={classes.root} justify="center">
-      <Grid item>
+    <Grid container className={classes.root} justify="space-evenly">
+      <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
         <Typography className={classes.text}>Code</Typography>
         <Typography className={classes.text}>With Me</Typography>
         <Grid item>
@@ -43,7 +46,7 @@ const SocialFooter = () => {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
         <Typography className={classes.text}>Connect</Typography>
         <Typography className={classes.text}>With Me</Typography>
         <Grid item>
@@ -53,7 +56,7 @@ const SocialFooter = () => {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
         <Typography className={classes.text}>Follow</Typography>
         <Typography className={classes.text}>Me</Typography>
         <Grid item>
@@ -63,7 +66,7 @@ const SocialFooter = () => {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
         <Typography className={classes.text}>Email</Typography>
         <Typography className={classes.text}>Me</Typography>
         <Grid item>
