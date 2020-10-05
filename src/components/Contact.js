@@ -14,8 +14,20 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   headline: {
-    fontSize: "30px",
+    position: "absolute",
+    top: "100px",
+    left: "100px",
+    "@media (max-width: 960px)": {
+      top: "100px",
+      left: "55px",
+    },
   },
+  text: {
+    fontSize: "4rem",
+    "@media (max-width: 960px)": {
+      fontSize: "1.5rem",
+    },
+  }
 }));
 
 const Contact = () => {
@@ -24,14 +36,12 @@ const Contact = () => {
   return (
     <Box className={classes.root} id="contact">
       <CardMedia className={classes.media} image={Image} title="Landing Page">
-          <Typography className={classes.headline}>
-            Let's Start Chatting Today!
-          </Typography>
-          <Typography className={classes.headline}>
-            Use any of the links below.
-          </Typography>
-          <SocialFooter />
-          <Footer />
+        <Box className={classes.headline}>
+          <Typography className={classes.text}>Let's Start Chatting Today!</Typography>
+          <Typography className={classes.text}>Use any of the links below.</Typography>
+        </Box>
+        <SocialFooter />
+        <Footer />
       </CardMedia>
     </Box>
   );
