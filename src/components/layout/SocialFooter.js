@@ -16,64 +16,59 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     position: "absolute",
     bottom: theme.spacing(20),
-
-    // width: "calc(100% - 80px)",
   },
   icons: {
-    fontSize: "100px",
+    fontSize: "10rem",
+    marginBottom: "150px",
+    color: "#6699CC",
+    "&:hover": {
+      color: "#FF9900",
+    },
+    "@media (max-width: 960px)": {
+      marginBottom: "50px",
+      fontSize: "8rem",
+    },
   },
   text: {
-    // maxWidth: "100px",
     color: "white",
-    fontSize: "20px",
   },
 }));
 
 const SocialFooter = () => {
   const classes = useStyles();
 
-  // xs={6} sm={6} md={3} lg={3} xl={3}
-
   return (
     <Grid container className={classes.root} justify="space-evenly">
       <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
-        <Typography className={classes.text}>Code</Typography>
-        <Typography className={classes.text}>With Me</Typography>
-        <Grid item>
-          <Link href={social.github} target="_blank">
-            <GitHubIcon className={classes.icons} />
-          </Link>
-        </Grid>
+        <Link href={social.github} target="_blank">
+          <Typography variant='h5' className={classes.text}>Code</Typography>
+          <Typography variant='h5' className={classes.text}>With Me</Typography>
+          <GitHubIcon className={classes.icons} />
+        </Link>
       </Grid>
 
       <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
-        <Typography className={classes.text}>Connect</Typography>
-        <Typography className={classes.text}>With Me</Typography>
-        <Grid item>
-          <Link href={social.linkedIn} target="_blank">
-            <LinkedInIcon className={classes.icons} />
-          </Link>
-        </Grid>
+        <Link href={social.linkedIn} target="_blank">
+          <Typography variant='h5' className={classes.text}>Connect</Typography>
+          <Typography variant='h5' className={classes.text}>With Me</Typography>
+          <LinkedInIcon className={classes.icons} />
+        </Link>
       </Grid>
 
       <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
-        <Typography className={classes.text}>Follow</Typography>
-        <Typography className={classes.text}>Me</Typography>
-        <Grid item>
-          <Link href={social.instagram} target="_blank">
-            <InstagramIcon className={classes.icons} />
-          </Link>
-        </Grid>
+        <Link href={social.instagram} target="_blank">
+          <Typography variant='h5' className={classes.text}>Follow</Typography>
+          <Typography variant='h5' className={classes.text}>Me</Typography>
+          <InstagramIcon className={classes.icons} />
+        </Link>
       </Grid>
 
       <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
-        <Typography className={classes.text}>Email</Typography>
-        <Typography className={classes.text}>Me</Typography>
-        <Grid item>
-          <Link href={social.email} target="_blank">
-            <EmailIcon className={classes.icons} />
-          </Link>
-        </Grid>
+        <Link href={social.email} target="_blank">
+          <Typography variant='h5' className={classes.text}>Email</Typography>
+          <Typography variant='h5' className={classes.text}>Me</Typography>
+          <EmailIcon className={classes.icons} />
+        </Link>
       </Grid>
     </Grid>
   );
